@@ -3,8 +3,8 @@ import PageListItem from '../PageListItem/PageListItem';
 import { Link } from 'react-router-dom';
 
 function HomePage({cards}) {
-  const elements = cards.map((item) => {
-    return <li><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></li>
+  const elements = cards.map((item, i) => {
+    return <div key={item.id}><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
   });
       return (
         <main className='main'>
