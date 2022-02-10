@@ -12,7 +12,7 @@ const Header = ({cards}) => {
     return (
       <div className='header'>
         <span className="header__hamburger hamburger opened" onClick={()=> {console.log('для анимации меню добавить класс transition к элементу с классом modal')}}><span className="hamburger__line"></span></span>
-       <h1 className="h1"><Link to="/">RS-Lang</Link></h1>
+       <h1 className="h1">RS-Lang</h1>
         <ul className="header__menu">
           { elements }
         </ul>
