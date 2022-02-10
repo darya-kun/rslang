@@ -9,10 +9,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const menuCard = [
-    { id: 1, selected: false, title: 'учебник', src: './img/carrot.jpg', link: '/dictionary'},
-    { id: 2, selected: false, title: 'игры', src: './img/okra.jpg', link: '/games'},
-    { id: 3, selected: false, title: 'статистика', src: './img/pumpkin.jpg', link: '/statistic'},
-    { id: 4, selected: false, title: 'еще что-то', src: './img/cucumber.jpg', link: '/something'}
+    { id: 1, selected: false, title: 'авторизация', src: './img/cucumber.jpg', link: '/authorization'},
+    { id: 2, selected: false, title: 'учебник', src: './img/carrot.jpg', link: '/dictionary'},
+    { id: 3, selected: false, title: 'игры', src: './img/okra.jpg', link: '/games'},
+    { id: 4, selected: false, title: 'статистика', src: './img/pumpkin.jpg', link: '/statistic'},
    ]
 
   return (
@@ -21,6 +21,7 @@ const App = () => {
     <div>
     <Router>
       <Routes>
+        <Route path='/authorization' element={<Statistic/>} />
         <Route path='/' element={<HomePage cards={menuCard} />}/>
         <Route path='/dictionary' element={<Dictionary/>} />
         <Route path='/games' element={<Games/>} />
