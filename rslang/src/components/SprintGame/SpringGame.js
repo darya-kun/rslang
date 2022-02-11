@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+// Styles
 import './SprintGame.css'
 
 function SprintGame() {
   return (
     <main className='main'>
       <section className='sprint'>
-
         <div className='start-screen'>
           <div className='start-screen__description'>
             <h1 className='start-screen__title'>СПРИНТ</h1>
@@ -27,8 +27,6 @@ function SprintGame() {
             </Link>
           </div>
         </div>
-
-
         <div className='game'>
           <div className='sprint__content'>
             <div className='sprint__timer'>
@@ -69,7 +67,6 @@ function SprintGame() {
             </button>
           </div>
         </div>
-
       </section>
     </main>
   )
