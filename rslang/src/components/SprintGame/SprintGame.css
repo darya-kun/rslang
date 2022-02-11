@@ -1,13 +1,3 @@
-.sprint {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-}
-
 /* Start screen */
 .start-screen {
   display: flex;
@@ -16,17 +6,17 @@
   justify-content: space-between;
   max-width: 600px;
   width: 90%;
-  text-align: center;
-  height: 100vh;
+  /* height: 100vh; */
   padding: 50px 0;
+  text-align: center;
 }
 
 .start-screen__description {
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 60px;
 }
 
 .start-screen__title {
@@ -51,6 +41,7 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .level-button {
@@ -78,7 +69,6 @@
 }
 
 .start-screen__button {
-  margin: 40px 0;
   padding: 10px 30px;
   border: none;
   font-size: 14px;
@@ -94,8 +84,17 @@
   cursor: default;
 }
 
-
 /* Game */
+.sprint {
+  width: 100%;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
 .game {
   width: 100%;
   display: flex;
