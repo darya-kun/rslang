@@ -19,7 +19,7 @@ const Games = () => {
   return (
     <main className='main'>
       <div className="cards-container">
-        <Link to='/sprint'>
+        <Link to='/games/sprint'>
           <div className='card card_game'>
             <img src='' className='card-image' alt='sprint card'></img>
             <div className='card-contain'>
@@ -29,7 +29,7 @@ const Games = () => {
             </div>
           </div>
         </Link>
-        <Link to='/audiocall'>
+        <Link to='/games/audiocall'>
           <div className='card card_game'>
             <img src='' className='card-image' alt='sprint card'></img>
             <div className='card-contain'>
