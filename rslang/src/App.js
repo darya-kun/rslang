@@ -5,6 +5,8 @@ import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
 import Statistic from './components/Statistic/Statistic';
 import Games from './components/Games/Games';
+import SprintGame from './components/SprintGame/SpringGame';
+import AudiocallGame from './components/AudiocallGame/AudiocallGame';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
@@ -26,6 +28,8 @@ const App = () => {
         <Route path='/dictionary' element={<Dictionary/>} />
         <Route path='/games' element={<Games/>} />
         <Route path='/statistic' element={<Statistic/>} />
+        <Route path='/games/sprint' element={<SprintGame/>} />
+        <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
       </Routes>
     </Router>
     </div>
