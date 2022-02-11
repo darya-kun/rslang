@@ -1,0 +1,15 @@
+.cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(41, 41, 41, 0.6);
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+}
+
+.invisible {
+  display: none;
+}
+

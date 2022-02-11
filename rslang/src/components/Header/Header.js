@@ -1,11 +1,5 @@
 import React from 'react';
 import MenuListItem from '../MenuListItem/MenuListItem';
-import { Link } from 'react-router-dom';
-
-const H1 = () => {
-  return <h1 className="h1">RS-Lang</h1>
-}
-
 
 const Header = ({cards}) => {
 

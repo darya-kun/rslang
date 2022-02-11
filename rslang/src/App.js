@@ -1,6 +1,7 @@
 import React from 'react';
 import HomePage from './components/HomePage/HomePage';
 import Header from './components/Header/Header';
+import Cover from './components/Cover/Cover';
 import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
 import Statistic from './components/Statistic/Statistic';
@@ -18,11 +19,12 @@ const App = () => {
   return (
   <div className='wrapper'>
     <Header cards={menuCard}/>
+    <Cover/>
     <div>
     <Router>
       <Routes>
         <Route path='/authorization' element={<Statistic/>} />
-        <Route path='/' element={<HomePage cards={menuCard} />}/>
+        <Route path='/' element={<HomePage cards={menuCard} />} exact/>
         <Route path='/dictionary' element={<Dictionary/>} />
         <Route path='/games' element={<Games/>} />
         <Route path='/statistic' element={<Statistic/>} />
