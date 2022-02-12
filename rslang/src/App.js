@@ -24,44 +24,44 @@ const App = () => {
   }
 
   if(visible) {
-  return (
-  <div className='wrapper'>
-    <Header togglePopMenu={togglePopMenu}/> 
-    <Cover togglePopMenu={togglePopMenu}/>
-    <div>
-    <Router>
-      <Routes>
-        <Route path='/authorization' element={<Statistic/>} />
-        <Route path='/' element={<HomePage cards={menuCard} />} exact/>
-        <Route path='/dictionary' element={<Dictionary/>} />
-        <Route path='/games' element={<Games/>} />
-        <Route path='/statistic' element={<Statistic/>} />
-        <Route path='/games/sprint' element={<SprintGame/>} />
-        <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
-      </Routes>
-    </Router>
-    </div>
-    <PopUpMenu cards={menuCard} togglePopMenu={togglePopMenu}/>
-  </div>
-  )
-  } else {
     return (
-      <div className='wrapper'>
-        <Header togglePopMenu={togglePopMenu}/> 
-        <div>
-        <Router>
-          <Routes>
-            <Route path='/authorization' element={<Statistic/>} />
-            <Route path='/' element={<HomePage cards={menuCard} />} exact/>
-            <Route path='/dictionary' element={<Dictionary/>} />
-            <Route path='/games' element={<Games/>} />
-            <Route path='/statistic' element={<Statistic/>} />
-          </Routes>
-        </Router>
+      <Router>
+        <div className='wrapper'>
+          <Header togglePopMenu={togglePopMenu}/> 
+          <Cover togglePopMenu={togglePopMenu}/>
+          <div>
+            <Routes>
+              <Route path='/authorization' element={<Statistic/>} />
+              <Route path='/' element={<HomePage cards={menuCard} />} exact/>
+              <Route path='/dictionary' element={<Dictionary/>} />
+              <Route path='/games' element={<Games/>} />
+              <Route path='/statistic' element={<Statistic/>} />
+              <Route path='/games/sprint' element={<SprintGame/>} />
+              <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
+            </Routes>
+          </div>
+          <PopUpMenu cards={menuCard} togglePopMenu={togglePopMenu}/>
         </div>
-      </div>
+      </Router>
+    )
+  } else {
+      return (
+        <Router>
+          <div className='wrapper'>
+            <Header togglePopMenu={togglePopMenu}/> 
+            <div>
+              <Routes>
+                <Route path='/authorization' element={<Statistic/>} />
+                <Route path='/' element={<HomePage cards={menuCard} />} exact/>
+                <Route path='/dictionary' element={<Dictionary/>} />
+                <Route path='/games' element={<Games/>} />
+                <Route path='/statistic' element={<Statistic/>} />
+              </Routes>
+            </div>
+          </div>
+        </Router>
       )
-  }
+    }
 }
 
 export default App

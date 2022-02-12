@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './cover.css';
 
 const Cover = ({togglePopMenu}) => {
   return   <div className="cover" onClick={() => togglePopMenu()}></div>
