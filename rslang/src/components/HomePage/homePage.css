@@ -1,0 +1,36 @@
+.main {
+  margin: 110px auto auto;
+}
+
+.cards-container {
+display: flex;
+max-width: 800px;
+padding: 15px 30px;
+justify-content: space-between;
+flex-wrap: wrap;
+column-gap: 10px;
+}
+
+.about-us {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  color:cadetblue;
+}
+
+.about-us__title {
+  font: 30px "Roboto", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0em;
+  text-align: center;
+  margin-top: 0;
+}
+
+.about-us__content {
+  column-gap: 20px;
+  margin: 0 20px 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 420px;
+}

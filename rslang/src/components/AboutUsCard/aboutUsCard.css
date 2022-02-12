@@ -1,0 +1,34 @@
+.about-us__card {
+  font-size: 12px;
+  color: cadetblue;
+  width: 180px;
+  padding-top: 15px;
+}
+
+.about-us__card__title {
+  display: flex;
+}
+
+.about-us__card__img {
+  width: 52px;
+  height: 52px;
+  margin-right: 10px;
+}
+
+.about-us__card__name {
+  font-weight: 500;
+    font-size: 1.6em;
+    margin-top: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-us__card__role {
+  font-weight: 500;
+  font-size: 16px;
+  margin-top: 0.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.about-us__card__text {
+  font-size: 14px;
+}

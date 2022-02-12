@@ -1,3 +1,7 @@
+.h1 {
+  font-size: 40px;
+}
+
 .h1:hover {
   color: aquamarine;
   scale: 1.2;
