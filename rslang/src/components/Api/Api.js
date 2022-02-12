@@ -47,20 +47,23 @@ export default class Service {
   };
 
   async updateUser (id){
-
     const user = {
-      name,
+      username,
       email,
       password,
     };
-    
-    const response = await fetch(`${this._apiBase}users/${id}`, {
+    await fetch(`${this._apiBase}users/${id}`, {
       method: 'PUT',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify(user),
     });
   };
+
+  async deleteUser (id) {
+    await fetch(`${this._apiBase}users/${id}`, { method: 'DELETE' });
+  };
+  
 };
