@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Poppins'; /* Имя шрифта */
+  src: url('/fonts/Poppins-Regular.ttf'); /* Путь к файлу со шрифтом */
+ }
+
 :root {
   font-size: 10px;
 }
@@ -74,6 +79,7 @@ ul {
   background-color: #2196f3;
   position: fixed;
   top: 0;
+  z-index: 9;
 }
 
 .header__button {
@@ -119,19 +125,6 @@ ul {
 .hamburger__line {
   top: calc( 50% - 1.5px);
   left: 0;
-}
-
-.main {
-    margin: 11rem auto auto;
-}
-
-.cards-container {
-  display: flex;
-  max-width: 80rem;
-  padding: 1.5rem 3rem;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  column-gap: 1rem;
 }
 
 .card-image {
