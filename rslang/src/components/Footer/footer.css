@@ -1,0 +1,71 @@
+.footer {
+  width: 100%;
+  display: flex;
+  padding: 0.5rem 3rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #2196f3;
+  position: fixed;
+  bottom: 0;
+}
+
+.footer-container {
+  padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.github {
+  cursor: pointer;
+  display: block;
+  width: 120px;
+  height: 45px;
+  padding-left: 45px;
+  background-image: url('/public/icons/github.svg');
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  line-height: 45px;
+  color: grey;
+  font-size: 1.4em;
+  font-weight: 700;
+  font-family: 'Open Sans', sans-serif;
+  transition: 0.3s;
+  text-decoration: unset;
+}
+.github:hover {
+  color: darkturquoise;
+}
+
+.rss {
+  display: block;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  width: 140px;;
+  height: 32px;
+  background-image: url('/icons/rss.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: left center;
+  padding-right: 111px;
+}
+
+.rss-year {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 21px;
+  letter-spacing: -2px;
+  color: grey;
+  line-height: 0.8;
+  font-weight: 900;
+  transition: 0.3s;
+}
+.rss:hover .rss-year {
+  right: -5px;
+  letter-spacing: 0;
+}
