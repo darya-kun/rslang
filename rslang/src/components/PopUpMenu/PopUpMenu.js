@@ -1,14 +1,15 @@
 import React from 'react';
 import PopUpMenuItem from '../PopUpMenuItem/PopUpMenuItem';
 
-function PopUpMenu({cards}) {
+function PopUpMenu({cards, togglePopMenu}) {
+ 
   const elements = cards.map((item) => {
     return <PopUpMenuItem title={item.title} key={item.id}/>
   });
       
   return (
-        <div className="modal">
-          <span className="modal__close-icon">
+        <div className="pop-up-menu">
+          <span className="pop-up-menu__close-icon" onClick={() => togglePopMenu()}>
             <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M12.4239 10.5172L20.6009 2.33999C21.1331 1.80809 21.1331 0.948089 20.6009 
               0.416194C20.069 -0.115701 19.209 -0.115701 18.6771 0.416194L10.4999 8.59343L2.3229 
@@ -21,7 +22,7 @@ function PopUpMenu({cards}) {
             </svg>
           </span>
      
-      <div className="modal__content">
+      <div className="pop-up-menu__content">
         { elements }
       </div>
       </div>

@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import HomePage from './components/HomePage/HomePage';
 import Header from './components/Header/Header';
+import Cover from './components/Cover/Cover';
 import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
 import Statistic from './components/Statistic/Statistic';
@@ -17,14 +18,21 @@ const App = () => {
     { id: 4, selected: false, title: 'статистика', src: './img/pumpkin.jpg', link: '/statistic'},
    ]
 
+  const [visible, setVisible] = useState(false);
+  const togglePopMenu = () => {
+    return visible === false ? setVisible(true) : setVisible(false);
+  }
+
+  if(visible) {
   return (
   <div className='wrapper'>
-    <Header cards={menuCard}/>
+    <Header togglePopMenu={togglePopMenu}/> 
+    <Cover togglePopMenu={togglePopMenu}/>
     <div>
     <Router>
       <Routes>
         <Route path='/authorization' element={<Statistic/>} />
-        <Route path='/' element={<HomePage cards={menuCard} />}/>
+        <Route path='/' element={<HomePage cards={menuCard} />} exact/>
         <Route path='/dictionary' element={<Dictionary/>} />
         <Route path='/games' element={<Games/>} />
         <Route path='/statistic' element={<Statistic/>} />
@@ -33,9 +41,27 @@ const App = () => {
       </Routes>
     </Router>
     </div>
-    <PopUpMenu cards={menuCard} />
+    <PopUpMenu cards={menuCard} togglePopMenu={togglePopMenu}/>
   </div>
   )
+  } else {
+    return (
+      <div className='wrapper'>
+        <Header togglePopMenu={togglePopMenu}/> 
+        <div>
+        <Router>
+          <Routes>
+            <Route path='/authorization' element={<Statistic/>} />
+            <Route path='/' element={<HomePage cards={menuCard} />} exact/>
+            <Route path='/dictionary' element={<Dictionary/>} />
+            <Route path='/games' element={<Games/>} />
+            <Route path='/statistic' element={<Statistic/>} />
+          </Routes>
+        </Router>
+        </div>
+      </div>
+      )
+  }
 }
 
 export default App

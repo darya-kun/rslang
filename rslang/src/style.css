@@ -179,19 +179,18 @@ ul {
 
 /* PopUp Menu */
 
-.modal {
+.pop-up-menu {
   position: fixed;
-  bottom: 2.5rem;
-  left: -20rem;
+  left: 0;
+  bottom: 0;
   padding: 0.5rem 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
   background-color: burlywood;
-  min-height: 120px;
-  height: 80%;
+  min-height: 100vh;
   width: 25%;
+  z-index: 20;
 }
 
 .transition {
@@ -204,12 +203,12 @@ ul {
   transition: transform 1s ease-in-out;
 }
 
-.modal__content {
+.pop-up-menu__content {
   margin-top: 4rem;
   margin-bottom: 2rem;
 }
 
-.menu-modal__content {
+.menu-pop-up-menu__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -237,17 +236,17 @@ ul {
   content: "♥ ";
 }
 
-.modal__close-icon {
+.pop-up-menu__close-icon {
   position: absolute;
-  top: 30px;
+  top: 25vw;
   right: 26px;
   cursor: pointer;
 }
 
-.modal__close-icon svg {
+.pop-up-menu__close-icon svg {
   pointer-events: none;
 }
 
-.modal__close-icon:hover {
+.pop-up-menu__close-icon:hover {
   transform: scale(1.1);
 }
