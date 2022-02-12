@@ -3,7 +3,7 @@ import React from 'react';
 
 const MenuListItem = ({title}) => {
     return (
-        <div classmenu="menu-modal__content">
+        <div classmenu="pop-up-menu__content">
           <h4 classmenu="menu__name selected">{title}</h4>
         </div>
       )

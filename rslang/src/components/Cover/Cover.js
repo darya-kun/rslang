@@ -1,8 +1,8 @@
 import React from 'react';
 import './style.css';
 
-const Cover = () => {
-  return   <div className="cover invisible"></div>
+const Cover = ({togglePopMenu}) => {
+  return   <div className="cover" onClick={() => togglePopMenu()}></div>
 }
 
 export default Cover;
