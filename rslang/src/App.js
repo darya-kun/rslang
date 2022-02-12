@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import HomePage from './components/HomePage/HomePage';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 import Cover from './components/Cover/Cover';
 import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
@@ -41,6 +42,7 @@ const App = () => {
             </Routes>
           </div>
           <PopUpMenu cards={menuCard} togglePopMenu={togglePopMenu}/>
+          <Footer/>
         </div>
       </Router>
     )
@@ -58,6 +60,7 @@ const App = () => {
                 <Route path='/statistic' element={<Statistic/>} />
               </Routes>
             </div>
+            <Footer/>
           </div>
         </Router>
       )
