@@ -1,12 +1,13 @@
 import React from 'react';
 
-
-const MenuListItem = ({title}) => {
+const PopUpMenuItem = ({item, togglePopMenu}) => {
+ 
     return (
-        <div classmenu="pop-up-menu__content">
-          <h4 classmenu="menu__name selected">{title}</h4>
+        <div className='menu__item' onClick={() => togglePopMenu()}>
+          <img src={item.src} alt='pix' className='menu__item__img'></img>
+          <h4 classmenu="menu__name selected">{item.title}</h4>
         </div>
       )
 }
 
-export default MenuListItem;
+export default PopUpMenuItem;

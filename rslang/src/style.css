@@ -204,8 +204,11 @@ ul {
 }
 
 .pop-up-menu__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 20px;
   margin-top: 4rem;
-  margin-bottom: 2rem;
 }
 
 .menu-pop-up-menu__content {
@@ -216,8 +219,20 @@ ul {
   cursor: pointer;
 }
 
-.menu__name:hover {
-  color: darkturquoise;
+.menu__item {
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+}
+.menu__item:hover {
+  color: aquamarine;
+  scale: 1.2;
+}
+
+.menu__item__img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 
 .menu__name {
@@ -226,6 +241,10 @@ ul {
   font-size: 1.2em;
   color: bisque;
   font-weight: 200;
+}
+
+.menu__name:hover {
+  color: darkturquoise;
 }
 
 .selected {
