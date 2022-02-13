@@ -1,0 +1,10 @@
+.dictionary__title {
+  font-size: 26px;
+  color: lightcoral;
+}
+
+.dictionary__container {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 10px;
+}
