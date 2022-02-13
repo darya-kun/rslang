@@ -58,6 +58,8 @@ const App = () => {
                 <Route path='/dictionary' element={<Dictionary/>} />
                 <Route path='/games' element={<Games/>} />
                 <Route path='/statistic' element={<Statistic/>} />
+                <Route path='/games/sprint' element={<SprintGame/>} />
+                <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
               </Routes>
             </div>
             <Footer/>

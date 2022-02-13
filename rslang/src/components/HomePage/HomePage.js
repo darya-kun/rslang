@@ -24,7 +24,7 @@ function HomePage({cards}) {
         {elements}
       </div>
       <div class="about-us">
-        <h3 class="about-us__title">About us</h3>
+        <h3 class="about-us__title">Наша команда</h3>
           <div class="about-us__content">
             {aboutUsCards}        
           </div>     
