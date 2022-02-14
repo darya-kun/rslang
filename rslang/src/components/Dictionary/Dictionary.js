@@ -17,7 +17,7 @@ const Dictionary = () => {
     return <div key={item.id}><DictionaryUnit id={item.id} src={item.src}/></div>
   });
   return   (
-    <main className='main'>
+    <div className="container">
       <section className="dictionary">
         <div className='dictionary__title'>Учебник</div>
         <div className='dictionary__icons'></div>
@@ -25,7 +25,7 @@ const Dictionary = () => {
           {elements}
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

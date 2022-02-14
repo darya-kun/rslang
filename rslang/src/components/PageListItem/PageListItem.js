@@ -1,6 +1,6 @@
 import React from 'react';
 
-const PageListItem = ({title, key, src}) => {
+const PageListItem = ({title, description, key, src}) => {
 
   return (
   <div className='card'>
@@ -8,6 +8,7 @@ const PageListItem = ({title, key, src}) => {
     <div className='card-contain'>
       <div className='card-contain__text'>
         <span className='card-contain__text_title'>{title}</span>
+        <p className='card-contain__description'>{description}</p>
       </div>
     </div>
   </div>

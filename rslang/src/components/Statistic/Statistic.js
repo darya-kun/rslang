@@ -2,10 +2,10 @@ import React from 'react';
 
 
 const Statistic = () => {
-  return   (
-    <main className='main'>
-      <div>Statistic Page</div>
-    </main>
+  return (
+    <div className="container">
+      <section>Statistic Page</section>
+    </div>
   )
 }
 

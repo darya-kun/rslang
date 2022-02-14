@@ -13,10 +13,10 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const menuCard = [
-    { id: 1, selected: false, title: 'авторизация', src: './img/cucumber.jpg', link: '/authorization'},
-    { id: 2, selected: false, title: 'учебник', src: './img/carrot.jpg', link: '/dictionary'},
-    { id: 3, selected: false, title: 'игры', src: './img/okra.jpg', link: '/games'},
-    { id: 4, selected: false, title: 'статистика', src: './img/pumpkin.jpg', link: '/statistic'},
+    { id: 1, selected: false, title: 'авторизация', src: './img/cat-backpack.png', link: '/authorization'},
+    { id: 2, selected: false, title: 'учебник', description: 'Более 3500 тысяч слов для изучения, разбитых на разделы по уровню твоей подготовки с удобной навигацией.', src: './img/cat-books.png', link: '/dictionary'},
+    { id: 3, selected: false, title: 'игры', description: '2 увлекательные игры на развитие запоминания слов и восприятия на слух.', src: './img/cat-puzzle.png', link: '/games'},
+    { id: 4, selected: false, title: 'статистика', description: 'Отслеживай свой прогресс в индивидуальной статистике, ставь цели и вдохновляйся на и достижение новых результатов каждый день!', src: './img/cat-calculator.png', link: '/statistic'},
    ]
 
   const [visible, setVisible] = useState(false);
@@ -27,10 +27,10 @@ const App = () => {
   if(visible) {
     return (
       <Router>
-        <div className='wrapper'>
           <Header togglePopMenu={togglePopMenu}/> 
           <Cover togglePopMenu={togglePopMenu}/>
-          <div>
+          <main className="main">
+            <div className="container">
             <Routes>
               <Route path='/authorization' element={<Statistic/>} />
               <Route path='/' element={<HomePage cards={menuCard} />} exact/>
@@ -40,18 +40,17 @@ const App = () => {
               <Route path='/games/sprint' element={<SprintGame/>} />
               <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
             </Routes>
-          </div>
+            </div>
+          </main>
           <PopUpMenu cards={menuCard} togglePopMenu={togglePopMenu}/>
           <Footer/>
-        </div>
       </Router>
     )
   } else {
       return (
         <Router>
-          <div className='wrapper'>
             <Header togglePopMenu={togglePopMenu}/> 
-            <div>
+            <main className="main">
               <Routes>
                 <Route path='/authorization' element={<Statistic/>} />
                 <Route path='/' element={<HomePage cards={menuCard} />} exact/>
@@ -61,9 +60,8 @@ const App = () => {
                 <Route path='/games/sprint' element={<SprintGame/>} />
                 <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
               </Routes>
-            </div>
+            </main>
             <Footer/>
-          </div>
         </Router>
       )
     }

@@ -6,7 +6,7 @@ import './AudiocallGame.css'
 
 function AudiocallGame() {
   return (
-    <main className='main'>
+    <div className="container">
       <section className='audiocall'>
         <GameSettings />
         <div className='start-screen'>
@@ -61,7 +61,7 @@ function AudiocallGame() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

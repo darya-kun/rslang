@@ -10,12 +10,12 @@
   margin-bottom: 20px;
   background: #fff;
   border-radius: 9px;
-  }
+}
   
-  .dictionary-unit:hover {
-    scale: 1.3;
-    opacity: 0.8;
-  }
+.dictionary-unit:hover {
+  scale: 1.3;
+  opacity: 0.8;
+}
 
 .dictionary-unit__image {
   max-width: 150px;
