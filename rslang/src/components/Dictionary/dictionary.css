@@ -1,10 +1,18 @@
+.dictionary {
+  padding: 60px 0;
+}
+
 .dictionary__title {
-  font-size: 26px;
-  color: lightcoral;
+  font-size: 46px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  color:#2e7d8d;
+  margin-bottom: 30px;
 }
 
 .dictionary__container {
   display: flex;
   flex-wrap: wrap;
-  grid-gap: 10px;
+  justify-content: space-between;
 }

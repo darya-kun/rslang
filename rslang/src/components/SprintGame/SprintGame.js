@@ -6,7 +6,7 @@ import './SprintGame.css'
 
 function SprintGame() {
   return (
-    <main className='main'>
+    <div className="container">
       <section className='sprint'>
         <GameSettings />
         <div className='start-screen'>
@@ -70,7 +70,7 @@ function SprintGame() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 
