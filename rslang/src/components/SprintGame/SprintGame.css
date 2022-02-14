@@ -86,26 +86,24 @@
 
 /* Game */
 .sprint {
-  width: 100%;
-  /* height: 100vh; */
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  width: 100%;
+  /* height: 100vh; */
+  padding: 20px 10px;
 }
 
 .game {
-  width: 100%;
   display: flex;
   flex-direction: column;
-}
-
-.sprint__content {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-bottom: 30px;
+  width: 400px;
+  height: 400px;
+  padding: 20px 5px;
+  background-color: #f8f8f8;
+  box-shadow: 1px 3px 4px rgb(0 0 0 / 10%);
 }
 
 .sprint__timer {
@@ -115,7 +113,6 @@
   margin-bottom: 20px;
   font-size: 18px;
 }
-
 .timer-icon {
   display: inline-block;
   width: 26px;
@@ -123,16 +120,22 @@
   margin-bottom: 5px;
   fill: #d4d4d4;
 }
-
 .counter {
   font-size: 16px;
+}
+
+.sprint__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 60px;
 }
 
 .sprint__words {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 .sprint__word_en {
   font-size: 48px;

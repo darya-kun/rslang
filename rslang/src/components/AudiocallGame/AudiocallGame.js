@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import GameSettings from '../GameSettings/GameSettings';
 // Styles
 import './AudiocallGame.css'
 
@@ -7,6 +8,7 @@ function AudiocallGame() {
   return (
     <main className='main'>
       <section className='audiocall'>
+        <GameSettings />
         <div className='start-screen'>
           <div className='start-screen__description'>
             <h1 className='start-screen__title'>Аудиовызов</h1>

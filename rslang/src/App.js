@@ -7,7 +7,7 @@ import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
 import Statistic from './components/Statistic/Statistic';
 import Games from './components/Games/Games';
-import SprintGame from './components/SprintGame/SpringGame';
+import SprintGame from './components/SprintGame/SprintGame';
 import AudiocallGame from './components/AudiocallGame/AudiocallGame';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
