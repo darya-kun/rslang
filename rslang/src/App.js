@@ -14,9 +14,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 const App = () => {
   const menuCard = [
-    { id: 1, selected: false, title: 'авторизация', src: './img/cat-backpack.png', link: '/authorization'},
-    { id: 2, selected: false, title: 'учебник', description: 'Более 3500 тысяч слов для изучения, разбитых на разделы по уровню твоей подготовки с удобной навигацией.', src: './img/cat-books.png', link: '/dictionary'},
-    { id: 3, selected: false, title: 'игры', description: '2 увлекательные игры на развитие запоминания слов и восприятия на слух.', src: './img/cat-puzzle.png', link: '/games'},
+    { id: 1, selected: false, title: 'авторизация', description: 'Авторизованный пользователь может настраивать интерфейс под себя', src: './img/cat-backpack.png', link: '/authorization'},
+    { id: 2, selected: false, title: 'учебник', description: 'Более 3500 тысяч слов для изучения, разбитых на разделы по уровню твоей подготовки с удобной навигацией', src: './img/cat-books.png', link: '/dictionary'},
+    { id: 3, selected: false, title: 'игры', description: 'Увлекательные игры на развитие запоминания слов и восприятия на слух', src: './img/cat-puzzle.png', link: '/games'},
     { id: 4, selected: false, title: 'статистика', description: 'Отслеживай свой прогресс в индивидуальной статистике, ставь цели и вдохновляйся на и достижение новых результатов каждый день!', src: './img/cat-calculator.png', link: '/statistic'},
    ]
 
