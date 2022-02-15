@@ -46,7 +46,7 @@ export default class Service {
     return await response.json();
   };
 
-  async updateUser (id){
+/*  async updateUser (id){
     const user = {
       username,
       email,
@@ -214,5 +214,5 @@ export default class Service {
       body: JSON.stringify(user)
     });
     return await response.json();
-  };
+  };*/
 };

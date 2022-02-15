@@ -1,5 +1,6 @@
 import React from 'react';
 import DictionaryUnit from '../DictionaryUnit/DictionaryUnit';
+import {Link} from 'react-router-dom';
 import './dictionary.css';
 
 
@@ -11,11 +12,13 @@ const Dictionary = () => {
     { id: 4, src: '/img/cat-books.png'},
     { id: 5, src: '/img/cat-pencil.png'},
     { id: 6, src: '/img/cat-backpack.png'},
-   ]
+  ]
 
   const elements = units.map((item) => {
-    return <div key={item.id}><DictionaryUnit id={item.id} src={item.src}/></div>
+    const link = '1';
+    return <div key={item.id}><Link to={link}><DictionaryUnit id={item.id} src={item.src}/></Link></div>
   });
+console.log(elements, 'el')
   return   (
     <div className="container">
       <section className="dictionary">
