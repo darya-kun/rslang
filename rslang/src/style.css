@@ -21,11 +21,12 @@ body {
   align-items: center;
   justify-content: center;
   background-color: yellow;
-  border-radius: 5px;
-  padding-top: 5rem;
-  margin: 0 auto;
-  padding: 2rem;
-  max-width: 120rem;
+  padding: 0 20px;
+  max-width: 1200px;
+}
+
+.main {
+  margin: 86px auto auto;
 }
 
 ul {

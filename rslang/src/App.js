@@ -5,6 +5,7 @@ import Footer from './components/Footer/Footer';
 import Cover from './components/Cover/Cover';
 import PopUpMenu from './components/PopUpMenu/PopUpMenu';
 import Dictionary from './components/Dictionary/Dictionary';
+import DictionaryPage from './components/DictionaryPage/DictionaryPage';
 import Statistic from './components/Statistic/Statistic';
 import Games from './components/Games/Games';
 import SprintGame from './components/SprintGame/SpringGame';
@@ -34,7 +35,8 @@ const App = () => {
             <Routes>
               <Route path='/authorization' element={<Statistic/>} />
               <Route path='/' element={<HomePage cards={menuCard} />} exact/>
-              <Route path='/dictionary' element={<Dictionary/>} />
+              <Route path='/dictionary' exact element={<Dictionary/>} />
+           
               <Route path='/games' element={<Games/>} />
               <Route path='/statistic' element={<Statistic/>} />
               <Route path='/games/sprint' element={<SprintGame/>} />
@@ -54,8 +56,9 @@ const App = () => {
             <div>
               <Routes>
                 <Route path='/authorization' element={<Statistic/>} />
-                <Route path='/' element={<HomePage cards={menuCard} />} exact/>
-                <Route path='/dictionary' element={<Dictionary/>} />
+                <Route path='/' element={<HomePage cards={menuCard} />}/>
+                <Route path='/dictionary/*' element={<Dictionary/>} />
+                <Route path='/dictionary/1' element={<DictionaryPage/>} />
                 <Route path='/games' element={<Games/>} />
                 <Route path='/statistic' element={<Statistic/>} />
                 <Route path='/games/sprint' element={<SprintGame/>} />

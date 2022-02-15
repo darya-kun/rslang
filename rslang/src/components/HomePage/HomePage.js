@@ -23,9 +23,9 @@ function HomePage({cards}) {
       <div className="cards-container">
         {elements}
       </div>
-      <div class="about-us">
-        <h3 class="about-us__title">Наша команда</h3>
-          <div class="about-us__content">
+      <div className="about-us">
+        <h3 className="about-us__title">Наша команда</h3>
+          <div className="about-us__content">
             {aboutUsCards}        
           </div>     
       </div>
