@@ -20,15 +20,15 @@ const Dictionary = () => {
   });
 console.log(elements, 'el')
   return   (
-      <main className='main'>
-        <section className="dictionary">
-          <div className='dictionary__title'>Учебник</div>
-          <div className='dictionary__icons'></div>
-          <div className='dictionary__container'>
-            {elements}
-          </div>
-        </section>
-      </main>
+    <div className="container">
+      <section className="dictionary">
+        <div className='dictionary__title'>Учебник</div>
+        <div className='dictionary__icons'></div>
+        <div className="dictionary__container">
+          {elements}
+        </div>
+      </section>
+    </div>
   )
 }
 

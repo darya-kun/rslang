@@ -10,15 +10,15 @@ const Games = () => {
   ]
 
   const elements = gameCard.map((item) => {
-    return <div><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
+    return <div className="games-card"><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
   });
 
   return (
-    <main className='main'>
-      <div className="cards-container">
+    <div className="container">
+      <section className="games">
         {elements}
-      </div> 
-    </main>
+      </section> 
+    </div>
   )
 }
 

@@ -1,32 +1,31 @@
 .about-us__card {
-  font-size: 12px;
-  color: cadetblue;
-  width: 180px;
-  padding-top: 15px;
+  max-width: 300px;
+  width: 100%;
+  padding: 15px 10px;
 }
 
 .about-us__card__title {
   display: flex;
+  margin-bottom: 10px;
 }
 
 .about-us__card__img {
-  width: 52px;
-  height: 52px;
-  margin-right: 10px;
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  /* border-radius: 50%; */
 }
 
 .about-us__card__name {
+  margin: 7px 0 5px;
+  font-size: 24px;
   font-weight: 500;
-    font-size: 1.6em;
-    margin-top: 0.7rem;
-    margin-bottom: 0.5rem;
 }
 
 .about-us__card__role {
-  font-weight: 500;
+  margin: 7px 0 5px;
   font-size: 16px;
-  margin-top: 0.7rem;
-  margin-bottom: 0.5rem;
+  font-weight: 500;
 }
 
 .about-us__card__text {
