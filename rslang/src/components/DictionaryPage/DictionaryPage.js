@@ -26,8 +26,8 @@ const DictionaryPage = () => {
 
   return (
     <main className='main'>
-      <section className="dictionary-page">
-        <div className='dictionary__title'>Учебник</div>
+      <section className="dictionary-page section">
+        <h2 className='title_section'>Учебник</h2>
         <div className='dictionary__icons'></div>
         <div className="dictionary__container">
           {elements}

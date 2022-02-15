@@ -1,8 +1,6 @@
 .footer {
   width: 100%;
   background-color: #f2f2f2;
-  position: fixed;
-  bottom: 0;
   box-shadow: 0 10px 20px 10px rgb(0 0 0 / 10%);
 }
 
@@ -20,12 +18,12 @@
   background-size: 35px;
   background-repeat: no-repeat;
   background-position: left center;
-  color: grey;
+  color: var(--grey);
   font-family: 'Open Sans', sans-serif;
   transition: all 0.3s;
 }
 .github:hover {
-  color: cadetblue;
+  color: var(--orange);
 }
 
 .rss {
@@ -43,7 +41,7 @@
   right: 0;
   font-size: 21px;
   letter-spacing: -2px;
-  color: grey;
+  color: var(--grey);
   line-height: 0.8;
   font-weight: 900;
   transition: 0.3s;

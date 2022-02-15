@@ -21,8 +21,8 @@ const Dictionary = () => {
 console.log(elements, 'el')
   return   (
     <div className="container">
-      <section className="dictionary">
-        <div className='dictionary__title'>Учебник</div>
+      <section className="dictionary section">
+        <h2 className='title_section'>Учебник</h2>
         <div className='dictionary__icons'></div>
         <div className="dictionary__container">
           {elements}

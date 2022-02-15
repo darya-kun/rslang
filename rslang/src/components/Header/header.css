@@ -1,6 +1,6 @@
 .header {
   box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
-  background-color: #f2f2f2;
+  background-color: var(--lightgrey);
 }
 
 .header__wrapper {
@@ -11,8 +11,8 @@
 }
 
 .header__button {
-  color: #f3f3f3;
-  background-color: #f3903f;
+  color: #fff;
+  background-color: var(--orange);
 }
 
 .hamburger__line,
@@ -23,7 +23,7 @@
   display: inline-block;
   height: 3px;
   width: 100%;
-  background-color:grey;
+  background-color: var(--grey);
   border-radius: 5px;
 }
 
@@ -51,12 +51,13 @@
 }
 
 .title-link {
+  margin-left: 80px;
   font-size: 40px;
-  color: #222222;
+  color: var(--black);
   transition: all .3s;
 }
 
 .title-link:hover {
-  color: #2e7d8d;
+  color: var(--orange);
   scale: 1.2;
 }

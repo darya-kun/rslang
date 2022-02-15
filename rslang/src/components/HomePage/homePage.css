@@ -1,22 +1,11 @@
-
-.intro {
+.advantages__wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 60px 0;
 }
 
 .about-us {
   padding: 60px 0;
-}
-
-.about-us__title {
-  font-size: 46px;
-  font-family: 'Nunito', sans-serif;
-  font-weight: 800;
-  text-align: center;
-  color:#2e7d8d;
-  margin-bottom: 30px;
 }
 
 .about-us__content {

@@ -7,11 +7,11 @@ import './AudiocallGame.css'
 function AudiocallGame() {
   return (
     <div className="container">
-      <section className='audiocall'>
+      <section className='audiocall section'>
         <GameSettings />
         <div className='start-screen'>
           <div className='start-screen__description'>
-            <h1 className='start-screen__title'>Аудиовызов</h1>
+            <h2 className='title_section'>Аудиовызов</h2>
             <p className='start-screen__text'>Тренировка Аудиовызов улучшает твое восприятие речи на слух.</p>
           </div>
           <div className='start-screen__game-start'>
