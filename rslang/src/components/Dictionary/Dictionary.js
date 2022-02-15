@@ -3,7 +3,6 @@ import DictionaryUnit from '../DictionaryUnit/DictionaryUnit';
 import {Link} from 'react-router-dom';
 import './dictionary.css';
 
-
 const Dictionary = () => {
   const units = [
     { id: 1, src: '/img/cat-books.png'},
@@ -18,7 +17,6 @@ const Dictionary = () => {
     const link = '1';
     return <div key={item.id}><Link to={link}><DictionaryUnit id={item.id} src={item.src}/></Link></div>
   });
-console.log(elements, 'el')
   return   (
     <div className="container">
       <section className="dictionary">

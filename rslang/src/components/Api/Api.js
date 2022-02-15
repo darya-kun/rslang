@@ -46,6 +46,19 @@ export default class Service {
     return await response.json();
   };
 
+  async getImage (urlPart){
+    const response = await fetch(`${this._apiBase}${urlPart}`, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'image/jpeg',
+      },
+    });
+    const blob = await response.blob()
+    return [URL.createObjectURL(blob), null]
+  };
+
 /*  async updateUser (id){
     const user = {
       username,
