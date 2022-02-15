@@ -1,4 +1,5 @@
 import React from 'react';
+import Intro from '../Intro/Intro';
 import PageListItem from '../PageListItem/PageListItem';
 import AboutUsCard from '../AboutUsCard/AboutUsCard';
 import { Link } from 'react-router-dom';
@@ -21,11 +22,15 @@ function HomePage({cards}) {
 
   return (
     <div className="container">
-      <section className="intro">
-        {elements}
+      <Intro />
+      <section className="section advantages">
+        <h2 className="title_section">Преимущества</h2>
+        <div className="advantages__wrapper">
+          {elements}
+        </div>
       </section>
       <section className="about-us">
-        <h3 className="about-us__title">Наша команда</h3>
+        <h3 className="title_section">Наша команда</h3>
         <div className="about-us__content">
           {aboutUsCards}
         </div>

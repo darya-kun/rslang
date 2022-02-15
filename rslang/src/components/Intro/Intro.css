@@ -1,0 +1,26 @@
+.intro__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro__description {
+  max-width: 550px;
+}
+
+.intro__title {
+  font-size: 64px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  color: #50ba9e;
+  margin-bottom: 30px;
+}
+
+.intro__text {
+  font-size: 24px;
+}
+
+.intro__image {
+  max-width: 400px;
+  width: 100%;
+}
