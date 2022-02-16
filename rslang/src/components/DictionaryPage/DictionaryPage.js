@@ -17,7 +17,7 @@ const DictionaryPage = () => {
         }
       }
         fetchData();
-      }, []);
+      });
   const arr = Array.from(posts);
   let elements = arr.map((item) => 
     <div key={item.id}>
