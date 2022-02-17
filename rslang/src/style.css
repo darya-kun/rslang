@@ -79,7 +79,7 @@ ul {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
-  color: var(--black);
+  color: #ffffff;
   background-color: var(--grey);
   transition: all .3s;
   /*&:hover {
