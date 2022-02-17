@@ -1,8 +1,63 @@
-.h1 {
-  font-size: 40px;
+.header {
+  box-shadow: 0 0 20px 0 rgb(0 0 0 / 10%);
+  background-color: var(--lightgrey);
 }
 
-.h1:hover {
-  color: aquamarine;
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.header__button {
+  color: #fff;
+  background-color: var(--orange);
+}
+
+.hamburger__line,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--grey);
+  border-radius: 5px;
+}
+
+.hamburger {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.hamburger:before {
+  top: 0;
+  left: 0;
+}
+
+.hamburger:after {
+  bottom: 0;
+  left: 0;
+}
+
+.hamburger__line {
+  top: calc( 50% - 1.5px);
+  left: 0;
+}
+
+.title-link {
+  margin-left: 80px;
+  font-size: 40px;
+  color: var(--black);
+  transition: all .3s;
+}
+
+.title-link:hover {
+  color: var(--orange);
   scale: 1.2;
 }

@@ -46,7 +46,35 @@ export default class Service {
     return await response.json();
   };
 
-  async updateUser (id){
+  async getImage (urlPart){
+    const response = await fetch(`${this._apiBase}${urlPart}`, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'image/jpeg',
+      },
+    });
+    const blob = await response.blob()
+    return [URL.createObjectURL(blob), null]
+  };
+
+  async getAudio (urlPart){
+    const rr = `${this._apiBase}${urlPart}`
+    console.log(rr)
+    const response = await fetch(`${this._apiBase}${urlPart}`, {
+      method: 'GET',
+      mode: 'cors',
+      cache: 'no-cache',
+      headers: {
+        'Content-Type': 'image/jpeg',
+      },
+    });
+    const blob = await response.blob()
+    return [URL.createObjectURL(blob), null]
+  };
+
+/*  async updateUser (id){
     const user = {
       username,
       email,
@@ -214,5 +242,5 @@ export default class Service {
       body: JSON.stringify(user)
     });
     return await response.json();
-  };
+  };*/
 };

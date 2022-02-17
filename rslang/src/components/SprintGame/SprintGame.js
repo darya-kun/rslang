@@ -6,12 +6,12 @@ import './SprintGame.css'
 
 function SprintGame() {
   return (
-    <main className='main'>
-      <section className='sprint'>
+    <div className="container">
+      <section className='sprint section'>
         <GameSettings />
         <div className='start-screen'>
           <div className='start-screen__description'>
-            <h1 className='start-screen__title'>СПРИНТ</h1>
+            <h2 className='title_section'>СПРИНТ</h2>
             <p className='start-screen__text'>Спринт - тренировка на скорость. Попробуй угадать как можно больше слов за 30 секунд.</p>
           </div>
           <div className='start-screen__game-start'>
@@ -70,7 +70,7 @@ function SprintGame() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

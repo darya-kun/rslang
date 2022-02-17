@@ -1,7 +1,7 @@
 import React from 'react';
 import DictionaryUnit from '../DictionaryUnit/DictionaryUnit';
+import {Link} from 'react-router-dom';
 import './dictionary.css';
-
 
 const Dictionary = () => {
   const units = [
@@ -11,21 +11,22 @@ const Dictionary = () => {
     { id: 4, src: '/img/cat-books.png'},
     { id: 5, src: '/img/cat-pencil.png'},
     { id: 6, src: '/img/cat-backpack.png'},
-   ]
+  ]
 
   const elements = units.map((item) => {
-    return <div key={item.id}><DictionaryUnit id={item.id} src={item.src}/></div>
+    const link = '1';
+    return <div key={item.id}><Link to={link}><DictionaryUnit id={item.id} src={item.src}/></Link></div>
   });
   return   (
-    <main className='main'>
-      <section className="dictionary">
-        <div className='dictionary__title'>Учебник</div>
+    <div className="container">
+      <section className="dictionary section">
+        <h2 className='title_section'>Учебник</h2>
         <div className='dictionary__icons'></div>
         <div className="dictionary__container">
           {elements}
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

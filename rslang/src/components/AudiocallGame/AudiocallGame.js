@@ -6,12 +6,12 @@ import './AudiocallGame.css'
 
 function AudiocallGame() {
   return (
-    <main className='main'>
-      <section className='audiocall'>
+    <div className="container">
+      <section className='audiocall section'>
         <GameSettings />
         <div className='start-screen'>
           <div className='start-screen__description'>
-            <h1 className='start-screen__title'>Аудиовызов</h1>
+            <h2 className='title_section'>Аудиовызов</h2>
             <p className='start-screen__text'>Тренировка Аудиовызов улучшает твое восприятие речи на слух.</p>
           </div>
           <div className='start-screen__game-start'>
@@ -61,7 +61,7 @@ function AudiocallGame() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   )
 }
 

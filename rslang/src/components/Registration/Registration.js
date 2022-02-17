@@ -1,12 +1,10 @@
 import React from "react";
+import './registration.css'
 
 const Registration = () => {
   return (
-    <div>
+    <div className="registration">
       <p>Зарегистрируйся на RS-Lang</p>
-      <input>Name</input>
-      <input>Email</input>
-      <input>password</input>
     </div>
   )
 }
