@@ -35,7 +35,7 @@ const App = () => {
             <Routes>
               <Route path='/authorization' element={<Statistic/>} />
               <Route path='/' element={<HomePage cards={menuCard} />} exact/>
-              <Route path='/dictionary' exact element={<Dictionary/>} />
+              <Route path='/dictionary/:id' element={<Dictionary/>} />
            
               <Route path='/games' element={<Games/>} />
               <Route path='/statistic' element={<Statistic/>} />
@@ -56,8 +56,8 @@ const App = () => {
               <Routes>
                 <Route path='/authorization' element={<Statistic/>} />
                 <Route path='/' element={<HomePage cards={menuCard} />}/>
-                <Route path='/dictionary/*' element={<Dictionary/>} />
-                <Route path='/dictionary/1' element={<DictionaryPage/>} />
+                <Route path='/dictionary' element={<Dictionary/>} />
+                <Route path='/dictionary/:pages/:id' element={<DictionaryPage/>}/>
                 <Route path='/games' element={<Games/>} />
                 <Route path='/statistic' element={<Statistic/>} />
                 <Route path='/games/sprint' element={<SprintGame/>} />
