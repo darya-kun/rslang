@@ -1,0 +1,64 @@
+/* Audiocall */
+
+.audiocall {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.audiocall__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.voice__button {
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  transition: all .3s;
+}
+
+.voice__button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(255, 255, 255, .2); */
+}
+
+.voice__icon {
+  width: 90px;
+  border-radius: 50%;
+  border: 3px solid white;
+  padding: 5px;
+  margin: 20px;
+  fill: #fff;
+}
+
+.audiocall__button {
+  margin: 10px 5px;
+  padding: 10px 30px;
+  border: none;
+  font-size: 14px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  color: #222;
+}
+
+.audiocall__button:hover {
+  background-color: #808080;
+}
+
+.audiocall__button_answer {
+  background-color: transparent;
+}
+
+.audiocall__button_answer:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  /* background-color: rgba(255, 255, 255, .2); */
+}
+
+.audiocall__words, .audiocall__help {
+  padding-top: 60px;
+}

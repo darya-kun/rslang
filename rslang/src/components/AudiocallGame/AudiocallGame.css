@@ -84,6 +84,9 @@
   cursor: default;
 }
 
+.start-screen__button:hover {
+  background-color: #FFC53D;
+}
 
 /* Audiocall */
 .audiocall {

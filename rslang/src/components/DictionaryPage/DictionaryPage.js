@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import Service from '../Api/Api';
 import DictionaryCard from '../DictionaryCard/DictionaryCard';
+import DictionaryGameLinks from '../DictionaryGameLinks/DictionaryGameLinks';
 import './dictionaryPage.css';
 import {useParams} from 'react-router-dom';
 
@@ -30,13 +31,15 @@ const DictionaryPage = () => {
   )
 
   return (
+    <div className='container'>
       <section className="dictionary-page section">
         <h2 className='title_section'>Учебник</h2>
-        <div className='dictionary__icons'></div>
-        <div className="dictionary__container">
-          {elements} 
+        <DictionaryGameLinks />
+        <div className="dictionary__container dictionary__container_cards">
+          {elements}
         </div>
       </section>
+    </div>
     )
 }
 

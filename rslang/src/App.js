@@ -10,7 +10,10 @@ import Statistic from './components/Statistic/Statistic';
 import Games from './components/Games/Games';
 import SprintGame from './components/SprintGame/SprintGame';
 import AudiocallGame from './components/AudiocallGame/AudiocallGame';
+import AudiocallPage from './components/AudiocallPage/AudiocallPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Autorization from './components/Autorization/Autorization';
+import Registration from './components/Registration/Registration';
 
 const App = () => {
   const menuCard = [
@@ -33,7 +36,8 @@ const App = () => {
           <main className="main">
             <div className="container">
             <Routes>
-              <Route path='/authorization' element={<Statistic/>} />
+              <Route path='/authorization' element={<Autorization/>} />
+              <Route path='/registration' element={<Registration/>} />
               <Route path='/' element={<HomePage cards={menuCard} />} exact/>
               <Route path='/dictionary/:id' element={<Dictionary/>} />
            
@@ -41,6 +45,7 @@ const App = () => {
               <Route path='/statistic' element={<Statistic/>} />
               <Route path='/games/sprint' element={<SprintGame/>} />
               <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
+              <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
             </Routes>
             </div>
           </main>
@@ -54,7 +59,8 @@ const App = () => {
             <Header togglePopMenu={togglePopMenu}/> 
             <main className="main">
               <Routes>
-                <Route path='/authorization' element={<Statistic/>} />
+                <Route path='/authorization' element={<Autorization/>} />
+                <Route path='/registration' element={<Registration/>} />
                 <Route path='/' element={<HomePage cards={menuCard} />}/>
                 <Route path='/dictionary' element={<Dictionary/>} />
                 <Route path='/dictionary/:pages/:id' element={<DictionaryPage/>}/>
@@ -62,6 +68,7 @@ const App = () => {
                 <Route path='/statistic' element={<Statistic/>} />
                 <Route path='/games/sprint' element={<SprintGame/>} />
                 <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
+                <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
               </Routes>
             </main>
             <Footer/>

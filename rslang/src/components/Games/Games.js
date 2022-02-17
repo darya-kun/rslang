@@ -10,7 +10,7 @@ const Games = () => {
   ]
 
   const elements = gameCard.map((item) => {
-    return <div className="games-card"><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
+    return <div className="games-card" key={item.id}><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
   });
 
   return (
