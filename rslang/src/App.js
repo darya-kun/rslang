@@ -11,6 +11,8 @@ import Games from './components/Games/Games';
 import SprintGame from './components/SprintGame/SprintGame';
 import AudiocallGame from './components/AudiocallGame/AudiocallGame';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Autorization from './components/Autorization/Autorization';
+import Registration from './components/Registration/Registration';
 
 const App = () => {
   const menuCard = [
@@ -33,7 +35,8 @@ const App = () => {
           <main className="main">
             <div className="container">
             <Routes>
-              <Route path='/authorization' element={<Statistic/>} />
+              <Route path='/authorization' element={<Autorization/>} />
+              <Route path='/registration' element={<Registration/>} />
               <Route path='/' element={<HomePage cards={menuCard} />} exact/>
               <Route path='/dictionary' exact element={<Dictionary/>} />
            
@@ -54,7 +57,8 @@ const App = () => {
             <Header togglePopMenu={togglePopMenu}/> 
             <main className="main">
               <Routes>
-                <Route path='/authorization' element={<Statistic/>} />
+                <Route path='/authorization' element={<Autorization/>} />
+                <Route path='/registration' element={<Registration/>} />
                 <Route path='/' element={<HomePage cards={menuCard} />}/>
                 <Route path='/dictionary/*' element={<Dictionary/>} />
                 <Route path='/dictionary/1' element={<DictionaryPage/>} />
