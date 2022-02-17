@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './DictionaryGameLinks.css';
 
-const DictionaryGameLinks = ({id, src}) => {
+const DictionaryGameLinks = () => {
   return (
     <div className='dictionary-game'>
       <div className='dictionary-game__container'>
