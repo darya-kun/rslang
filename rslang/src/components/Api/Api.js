@@ -26,11 +26,11 @@ export default class Service {
   async createUser(user) {
     const response = await fetch(this._apiBase + 'users', {
       method: 'POST',
+      body: JSON.stringify(user),
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(user)
+      }
     });
     return await response.json();
   };
@@ -244,3 +244,4 @@ export default class Service {
     return await response.json();
   };*/
 };
+export const service = new Service();
