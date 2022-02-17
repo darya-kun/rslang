@@ -3,15 +3,18 @@ import Service from '../Api/Api';
 import DictionaryCard from '../DictionaryCard/DictionaryCard';
 import DictionaryGameLinks from '../DictionaryGameLinks/DictionaryGameLinks';
 import './dictionaryPage.css';
+import {useParams} from 'react-router-dom';
 
 const DictionaryPage = () => {
+  const params = useParams();
+  const current = params.id;
   const temp = new Service();
   const [posts, setPosts] = useState([]);
 
   useEffect( () => { 
     async function fetchData() {
         try {
-          const res = await temp.getChunkWords('1', '5');
+          const res = await temp.getChunkWords( current, '5');
           setPosts(res);
         } catch (err) {
             console.log(err);
@@ -19,6 +22,7 @@ const DictionaryPage = () => {
       }
         fetchData();
       });
+
   const arr = Array.from(posts);
   let elements = arr.map((item) => 
     <div key={item.id}>
