@@ -1,0 +1,31 @@
+.dictionary__container_cards {
+  flex-direction: column;
+}
+
+.dictionary-game {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fcd5b4b8;
+  margin-bottom: 40px;
+}
+
+.dictionary-game__container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+}
+
+.dictionary-game__description {
+  font-size: 24px;
+  text-align: center;
+}
+
+.dictionary-game__buttons {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 5px;
+}
+
+.button_dictionary {
+  background-color: var(--orange);
+}
