@@ -7,9 +7,7 @@ import './AudiocallPage.css'
 function AudiocallPage() {
   const numbers = JSON.parse(localStorage.getItem('wordsArr'));
   const answer = localStorage.getItem('answer');
-  
-
-  console.log(answer, numbers, typeof(numbers))
+  console.log(answer)
   const buttons = numbers.map((item, i) => 
      <AnswerButton key={i} i={i} item={item} />
   );
