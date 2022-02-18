@@ -14,7 +14,7 @@ const DictionaryPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage] = useState(10);
 
-  useEffect( () => { 
+  useEffect(() => { 
     async function fetchData() {
         try {
           const res = await temp.getChunkWords( current, '5');
