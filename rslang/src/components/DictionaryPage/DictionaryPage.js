@@ -11,7 +11,7 @@ const DictionaryPage = () => {
   const temp = new Service();
   const [posts, setPosts] = useState([]);
 
-  useEffect( () => { 
+  useEffect(() => { 
     async function fetchData() {
         try {
           const res = await temp.getChunkWords( current, '5');

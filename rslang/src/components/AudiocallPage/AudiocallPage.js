@@ -1,6 +1,5 @@
 import React from 'react';
 import GameSettings from '../GameSettings/GameSettings';
-import getRandom from '../../utils/getRandom';
 // Styles
 import './AudiocallPage.css'
 
@@ -37,7 +36,7 @@ function AudiocallPage() {
             </div>
           </div>
           <div className='audiocall__help'>
-            <button className='audiocall__button' onClick={console.log(getRandom(2))}>Не знаю</button>
+            <button className='audiocall__button'>Не знаю</button>
           </div>
         </div>
       </section>

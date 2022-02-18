@@ -9,7 +9,7 @@ import DictionaryPage from './components/DictionaryPage/DictionaryPage';
 import Statistic from './components/Statistic/Statistic';
 import Games from './components/Games/Games';
 import SprintGame from './components/SprintGame/SprintGame';
-import AudiocallGame from './components/AudiocallGame/AudiocallGame';
+import AudiocallStartscreen from './components/AudiocallStartscreen/AudiocallStartscreen';
 import AudiocallPage from './components/AudiocallPage/AudiocallPage';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Autorization from './components/Autorization/Autorization';
@@ -44,7 +44,7 @@ const App = () => {
               <Route path='/games' element={<Games/>} />
               <Route path='/statistic' element={<Statistic/>} />
               <Route path='/games/sprint' element={<SprintGame/>} />
-              <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
+              <Route path='/games/audiocall' element={<AudiocallStartscreen/>} /> 
               <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
             </Routes>
             </div>
@@ -67,7 +67,7 @@ const App = () => {
                 <Route path='/games' element={<Games/>} />
                 <Route path='/statistic' element={<Statistic/>} />
                 <Route path='/games/sprint' element={<SprintGame/>} />
-                <Route path='/games/audiocall' element={<AudiocallGame/>} /> 
+                <Route path='/games/audiocall' element={<AudiocallStartscreen/>} /> 
                 <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
               </Routes>
             </main>
