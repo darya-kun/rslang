@@ -1,15 +1,14 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './registration.css';
 
 const createUser = async user => {
-  const rawResponse = await fetch('https://rs-lang-gowteam.herokuapp.com/users', {
+  await fetch('https://rs-lang-gowteam.herokuapp.com/users', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     },
-    token: null,
     body: JSON.stringify(user)
   });
 };
@@ -18,7 +17,6 @@ const Registration = () => {
     const [fName, setfName] = useState("");
     const [fEmail, setfEmail] = useState('');
     const [fPassword, setfPassword] = useState(``);
-    const navigate = useNavigate();
     const onSubmit = async (event) => {
       try{
         event.preventDefault();
