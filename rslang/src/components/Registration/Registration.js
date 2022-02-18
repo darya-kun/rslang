@@ -1,26 +1,33 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
-import './registration.css'
-import service from "../Api/Api";
+import './registration.css';
+
+const createUser = async user => {
+  const rawResponse = await fetch('https://rs-lang-gowteam.herokuapp.com/users', {
+    method: 'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+    token: null,
+    body: JSON.stringify(user)
+  });
+};
 
 const Registration = () => {
-
-  const navigate = useNavigate();
-  const [inputsValue, setValues] = useState();
-
-  const handleInputName = ({ target }) => {
-    setValues({
-      ...inputsValue,
-      [target.name]: target.value,
-    });
-  };
-  
-  const onSubmit = async (event) => {
-    event.preventDefault();
-    let { name = '', email = '', password = '' } = inputsValue;
-    console.log({ name, email, password });
-    const result = await service.createUser({ name, email, password });
-    result.successful ? navigate('/autorization') : alert(result.errors);
+    const [fName, setfName] = useState("");
+    const [fEmail, setfEmail] = useState('');
+    const [fPassword, setfPassword] = useState(``);
+    const navigate = useNavigate();
+    const onSubmit = async (event) => {
+      try{
+        event.preventDefault();
+        let inputsValue = {"name": fName, "email": fEmail, "password": fPassword};
+        const response = await createUser(inputsValue);
+        return response;
+      } catch(error) {
+        throw new Error('Erorr with authorization');
+      }
   };
 
   return (
@@ -29,11 +36,11 @@ const Registration = () => {
         <form className="loginForm" onSubmit={onSubmit}>
           Регистрация
           <br/>
-          Как зовут нашего котика: <input placeholder='Имя' type="text" name="name" onChange={handleInputName}></input>
+          Как зовут нашего котика: <input placeholder='Имя' type="text" name="name" onChange={e => setfName(e.target.value)}></input>
           <br/>
-          Введите почту: <input placeholder='johndoe@mail.com' type="text" name="email" onChange={handleInputName}></input>
+          Введите почту: <input placeholder='johndoe@mail.com' type="text" name="email" onChange={e => setfEmail(e.target.value)}></input>
           <br/>
-          Придумайте пароль: <input placeholder='пароль' type="password" name="password" onChange={handleInputName}></input>
+          Придумайте пароль: <input placeholder='пароль' type="password" name="password" onChange={e => setfPassword(e.target.value)}></input>
           <br/>
           <input type="submit" value="Отправить"/>
         </form>
