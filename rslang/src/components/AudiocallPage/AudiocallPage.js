@@ -1,9 +1,19 @@
 import React from 'react';
 import GameSettings from '../GameSettings/GameSettings';
+import AnswerButton from '../AnswerButton/AnswerButton';
 // Styles
 import './AudiocallPage.css'
 
 function AudiocallPage() {
+  const numbers = JSON.parse(localStorage.getItem('wordsArr'));
+  const answer = localStorage.getItem('answer');
+  
+
+  console.log(answer, numbers, typeof(numbers))
+  const buttons = numbers.map((item, i) => 
+     <AnswerButton key={i} i={i} item={item} />
+  );
+
   return (
     <div className="container">
       <section className='audiocall section'>
@@ -18,21 +28,7 @@ function AudiocallPage() {
           </div>
           <div className='audiocall__words'>
             <div className='audiocall__buttons'>
-              <button className='audiocall__button audiocall__button_answer' type='button'>
-                1 вариант
-              </button>
-              <button className='audiocall__button audiocall__button_answer' type='button'>
-                2 вариант
-              </button>
-              <button className='audiocall__button audiocall__button_answer' type='button'>
-                3 вариант
-              </button>
-              <button className='audiocall__button audiocall__button_answer' type='button'>
-                4 вариант
-              </button>
-              <button className='audiocall__button audiocall__button_answer' type='button'>
-                5 вариант
-              </button>
+              {buttons}
             </div>
           </div>
           <div className='audiocall__help'>
