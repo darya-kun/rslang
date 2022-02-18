@@ -6,13 +6,13 @@ const temp = new Service();
 
 const useAudio = url => {
   const [audio] = useState(new Audio(url));
-  audio.play()
-};
+  audio.play();
+}
 
 const DictionaryCard = ({item}) => {
   const urlAudio = item.audio;
   const play = useAudio(`https://react-learnwords-example.herokuapp.com/${urlAudio}`);
-
+  
   const [screenShot, setScreenshot] = useState(undefined);
   const urlImage = item.image;
  

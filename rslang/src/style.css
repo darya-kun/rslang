@@ -82,15 +82,6 @@ ul {
   color: #ffffff;
   background-color: var(--grey);
   transition: all .3s;
-  /*&:hover {
-    background-color: $hover-color;
-  }
-  &:active {
-    background-color: $active-color;
-  }
-  &:focus {
-    outline: none;
-}*/
 }
 
 .card-image {

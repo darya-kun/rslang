@@ -1,0 +1,9 @@
+.statistic-image {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.statistic-image__image {
+  max-width: 400px;
+  width: 100%;
+}
