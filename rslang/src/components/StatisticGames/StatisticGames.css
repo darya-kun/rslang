@@ -1,0 +1,30 @@
+.statistic-games__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.statistic-games__card {
+  padding: 20px;
+  margin: 0 40px 20px;
+  max-width: 400px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #fcd5b4b8;
+}
+
+.statistic-games__title {
+  margin-bottom: 15px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.statistic-games__list {
+  padding: 0;
+  margin: 0;
+}
+
+.statistic-games__icon {
+  padding-right: 10px;
+}
