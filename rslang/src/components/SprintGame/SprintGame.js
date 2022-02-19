@@ -50,7 +50,7 @@ function SprintGame() {
           <div className='sprint__buttons'>
             <button className='sprint__button sprint__button-true' type='button' id='0'>
               <span>
-              <svg class="sprint__button-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+              <svg className="sprint__button-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"></path>
               </svg>
               </span>
@@ -60,7 +60,7 @@ function SprintGame() {
               <span>
                 НЕВЕРНО
                 <span>
-                <svg class="sprint__button-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
+                <svg className="sprint__button-icon" focusable="false" viewBox="0 0 24 24" aria-hidden="true">
                   <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"></path>
                 </svg>
                 </span>
