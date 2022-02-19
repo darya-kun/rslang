@@ -11,7 +11,7 @@ const Statistic = () => {
         <StatisticWords />
         <StatisticGames />
         <div className="statistic-image">
-          <img className="statistic-image__image" src='../img/cat-calculator.png' alt='sjhd'></img>
+          <img className="statistic-image__image" src='../img/cat-calculator.png' width='400' height='400' alt='calculator cat'></img>
         </div>
       </section>
     </div>
