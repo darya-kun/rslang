@@ -17,13 +17,10 @@ const AnswerButton = ({i, item}) => {
       fetchData();
   });
 
-
   return (
-
     <button className='audiocall__button audiocall__button_answer' type='button'>
       {i+1} {word}
     </button>
-
   )
 }
 

@@ -9,6 +9,6 @@ export function AudiocallGame() {
   const res = [num, arr];
   localStorage.setItem('wordsArr', JSON.stringify(arr));
   localStorage.setItem('answer', num);
-  //const [isAvailable, setAvailable] = useState(false);
+  
   console.log(res)
 }
