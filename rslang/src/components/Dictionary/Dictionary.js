@@ -14,7 +14,7 @@ const Dictionary = () => {
   ]
 
   const elements = units.map((item) => {
-    return <div key={item.id}><Link to={`pages/${item.id}`}><DictionaryUnit id={item.id} src={item.src}/></Link></div>
+    return <div key={item.id}><Link to={`pages/${item.id - 1}`}><DictionaryUnit id={item.id} src={item.src}/></Link></div>
   });
   return   (
     <div className="container">
