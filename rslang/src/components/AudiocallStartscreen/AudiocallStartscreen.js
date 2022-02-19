@@ -2,9 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import GameSettings from '../GameSettings/GameSettings';
 import { AudiocallGame } from '../../services/AudiocallGame';
+import LevelButton from '../LevelButton/LevelButton';
 // Styles
 import './AudiocallStartscreen.css';
-import LevelButton from '../LevelButton/LevelButton';
 
 export function AudiocallStartscreen() {
 
