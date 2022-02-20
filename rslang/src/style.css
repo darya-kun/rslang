@@ -84,6 +84,10 @@ ul {
   transition: all .3s;
 }
 
+.button:hover {
+  opacity: .85;
+}
+
 .card-image {
   max-width: 150px;
   width: 100%;

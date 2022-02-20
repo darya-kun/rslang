@@ -10,15 +10,15 @@ const StatisticGames = () => {
           <h3 className="statistic-games__title">Спринт</h3>
           <ul className="statistic-games__list">
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Слов изучено: 0
             </li>
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Правильных ответов: 0 % 
             </li>
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Самая длинная серия правильных ответов: 0
             </li>
           </ul>
@@ -27,15 +27,15 @@ const StatisticGames = () => {
           <h3 className="statistic-games__title">Аудиовызов</h3>
           <ul className="statistic-games__list">
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Слов изучено: 0
             </li>
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Правильных ответов: 0 % 
             </li>
             <li className="statistic-games__item">
-              <i class="statistic-games__icon fas fa-check"></i>
+              <i className="statistic-games__icon fas fa-check"></i>
               Самая длинная серия правильных ответов: 0
             </li>
           </ul>

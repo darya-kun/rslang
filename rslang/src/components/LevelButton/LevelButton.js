@@ -12,7 +12,9 @@ const LevelButton = ({value, i}) => {
   
   return (
   <div>
-    <div className='level-button' selected={{selected}} style={{backgroundColor: `${color}`}} role='button' tabIndex='0' onClick={() => getLevel(i, selected)}>{value}</div>
+    <div className='level-button' selected={{selected}} 
+      style={{backgroundColor: `${color}`}} role='button'
+      tabIndex='0' onClick={() => getLevel(i, selected)}>{value}</div>
   </div>
   )
 }
