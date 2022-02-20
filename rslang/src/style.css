@@ -2,9 +2,22 @@
 
 :root {
   font-size: 14px;
+}
+html[data-theme='light'] {
+  --white: #fff;
   --lightgrey: #f2f2f2;
   --grey: #808080;
   --black: #2f2f2f;
+  --orange: #ee974e;
+  --aquagreen: #50ba9e;
+}
+
+
+html[data-theme='dark'] {
+  --white: #181a1b;
+  --lightgrey: #1f2223;
+  --grey: #808080;
+  --black: #f3f3f3;
   --orange: #ee974e;
   --aquagreen: #50ba9e;
 }
@@ -101,6 +114,7 @@ ul {
   margin: 10px 5px;
   border-radius: 9px;
   cursor: pointer;
+  background-color: var(--white);
   transition: all .3s;
 }
 
@@ -224,4 +238,10 @@ ul {
 
 .pop-up-menu__close-icon:hover {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .title_section {
+    font-size: 34px;
+  }
 }

@@ -8,7 +8,7 @@
   width: 150px;
   height: 40vh;
   margin-bottom: 20px;
-  background: #fff;
+  background: var(--white);
   border-radius: 9px;
   transition: all .3s;
 }
