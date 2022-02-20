@@ -51,13 +51,38 @@
 }
 
 .title-link {
-  margin-left: 80px;
   font-size: 40px;
   color: var(--black);
+  max-width: 310px;
+  width: 100%;
   transition: all .3s;
 }
 
 .title-link:hover {
   color: var(--orange);
   scale: 1.2;
+}
+
+.button_theme {
+  background-color: transparent;
+  border: transparent;
+  color: var(--black);
+}
+
+.theme-switcher__line {
+  color: var(--black);
+}
+
+.theme-switcher__icon_light {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .title-link {
+    max-width: 180px;
+  }
+  .header__button {
+    min-width: 80px;
+    padding: 10px 10px;
+  }
 }

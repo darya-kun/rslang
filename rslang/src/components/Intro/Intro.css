@@ -24,3 +24,16 @@
   max-width: 400px;
   width: 100%;
 }
+
+@media (max-width: 768px) {
+  .intro__image {
+    max-width: 380px;
+    width: 50%;
+  }
+  .intro__title {
+    font-size: 46px;
+  }
+  .intro__text {
+    font-size: 18px;
+  }
+}
