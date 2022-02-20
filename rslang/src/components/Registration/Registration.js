@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './registration.css';
 
 const createUser = async user => {
-  await fetch('https://rs-lang-gowteam.herokuapp.com/users', {
+  return await fetch('https://rs-lang-gowteam.herokuapp.com/users', {
     method: 'POST',
     headers: {
       'Accept': 'application/json',
@@ -14,18 +14,22 @@ const createUser = async user => {
 };
 
 const Registration = () => {
-    const [fName, setfName] = useState("");
-    const [fEmail, setfEmail] = useState('');
-    const [fPassword, setfPassword] = useState(``);
-    const onSubmit = async (event) => {
-      try{
-        event.preventDefault();
-        let inputsValue = {"name": fName, "email": fEmail, "password": fPassword};
-        const response = await createUser(inputsValue);
-        return response;
-      } catch(error) {
-        throw new Error('Erorr with authorization');
-      }
+  const [fName, setfName] = useState("");
+  const [fEmail, setfEmail] = useState('');
+  const [fPassword, setfPassword] = useState(``);
+  const kolya = useNavigate();
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    let inputsValue = { "name": fName, "email": fEmail, "password": fPassword };
+
+    const response = await createUser(inputsValue);
+    if (response.ok) {
+      kolya('/authorization')
+    } else {
+      alert('try again')
+      console.log(response)
+    }
   };
 
   return (
@@ -33,14 +37,14 @@ const Registration = () => {
       <div>
         <form className="loginForm" onSubmit={onSubmit}>
           Регистрация
-          <br/>
+          <br />
           Как зовут нашего котика: <input placeholder='Имя' type="text" name="name" onChange={e => setfName(e.target.value)}></input>
-          <br/>
+          <br />
           Введите почту: <input placeholder='johndoe@mail.com' type="text" name="email" onChange={e => setfEmail(e.target.value)}></input>
-          <br/>
+          <br />
           Придумайте пароль: <input placeholder='пароль' type="password" name="password" onChange={e => setfPassword(e.target.value)}></input>
-          <br/>
-          <input type="submit" value="Отправить"/>
+          <br />
+          <input type="submit" value="Отправить" />
         </form>
         <div>
           Есть у тебя уже есть логин{' '}

@@ -1,10 +1,10 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Service from '../Api/Api';
 import DictionaryCard from '../DictionaryCard/DictionaryCard';
 import DictionaryGameLinks from '../DictionaryGameLinks/DictionaryGameLinks';
 import DictionaryPagination from '../DictionaryPagination/DictionaryPagination';
 import './dictionaryPage.css';
-import {useParams} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 const DictionaryPage = () => {
   const params = useParams();
@@ -19,22 +19,22 @@ const DictionaryPage = () => {
   const changePrevPage = () => {
     setNumberPage(numberPage === 1 ? 1 : numberPage - 1)
   }
-  useEffect(() => { 
+  useEffect(() => {
     async function fetchData() {
-        try {
-          const res = await temp.getChunkWords( current, numberPage.toString());
-          setPosts(res);
-        } catch (err) {
-            console.log(err);
-        }
+      try {
+        const res = await temp.getChunkWords(current, numberPage.toString());
+        // setPosts(res);
+      } catch (err) {
+        console.log(err);
       }
-        fetchData();
-      });
+    }
+    fetchData();
+  });
 
   const arr = Array.from(posts);
-  let elements = arr.map((item) => 
+  let elements = arr.map((item) =>
     <div key={item.id}>
-      <DictionaryCard item={item}/>
+      <DictionaryCard item={item} />
     </div>
   )
 
@@ -43,7 +43,7 @@ const DictionaryPage = () => {
       <section className="dictionary-page section">
         <h2 className='title_section'>Учебник</h2>
         <DictionaryGameLinks />
-        <DictionaryPagination 
+        <DictionaryPagination
           numberPage={numberPage}
           changeNextPage={changeNextPage}
           changePrevPage={changePrevPage}
@@ -53,7 +53,7 @@ const DictionaryPage = () => {
         </div>
       </section>
     </div>
-    )
+  )
 }
 
 export default DictionaryPage;
