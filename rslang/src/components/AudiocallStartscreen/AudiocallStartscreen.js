@@ -7,11 +7,8 @@ import LevelButton from '../LevelButton/LevelButton';
 import './AudiocallStartscreen.css';
 
 export function AudiocallStartscreen() {
-
-  //const [buttonColor, setColor] = useState();
   const [disabled, setDisabled] = useState();
   
-  //disabled ? setColor('#d4d4d4') : setColor('#ee974e')
   const buttonStyle = {
     backgroundColor: disabled ? '#d4d4d4' : '#ee974e'
   }
@@ -22,7 +19,6 @@ export function AudiocallStartscreen() {
   useEffect(() => {
     const storage = localStorage.getItem('selectedLevel');
     if (storage) {
-     // setColor('#ee974e');
       setDisabled(false);
     }
   }, [])

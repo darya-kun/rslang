@@ -1,36 +1,33 @@
 import React, {useEffect, useState} from 'react';
 import {Link} from 'react-router-dom';
 import Service from '../Api/Api';
+import { AudiocallGame } from '../../services/AudiocallGame';
 import './AudiocallPopupAnswer.css';
 
 const temp = new Service();
 
-function AudiocallPopupAnswer({imgUrl}) {
+function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
   const [rightAnswer, setRightAnswer] = useState();
   const [img, setImg] = useState();
   const [fontColor, setFontColor] = useState();
-  const [visible, setVisible] = useState('none');
-  const [storage, setStorage] = useState();
+  const [reactionWord, setReactionWord] = useState();
 
   function clickNextButton() {
-    localStorage.setItem('audiocallAnswer', [])
-    
+    AudiocallGame();
+
+    closePopUp();
   }
 
   useEffect(() => {
-    const storagel = JSON.parse(localStorage.getItem('audiocallAnswer'));
-      setStorage(storagel);
-    console.log(storagel)
-    if (storagel && storagel[0] === 'right') {
-
-      setRightAnswer(storagel[1]);
+    const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
+    if (storage && storage[0] === 'right') {
+      setRightAnswer(storage[1]);
       setFontColor('green');
-      console.log(rightAnswer, visible);
-      setVisible('flex');
-    } else if (storagel && storagel[0] === 'wrong') {
+      setReactionWord('Супер!');
+    } else if (storage && storage[0] === 'wrong') {
+      setRightAnswer(storage[1]);
       setFontColor('red');
-      setVisible('flex');
-      console.log( visible)
+      setReactionWord('Ошибка!');
     }
   }, [])
 
@@ -45,20 +42,19 @@ function AudiocallPopupAnswer({imgUrl}) {
     }
     fetchData();
   }, [imgUrl])
-  //popUpVisible === true ? setVisible('flex') : setVisible('none')
+
   return (
-    <div className="audiocall-popup" style={{display: `${visible}`}}>
+    <div className="audiocall-popup" style={{display: `${ popUpVisible === true ? 'flex' : 'none' }`}}>
       <div className="audiocall-popup-image">
         <img className='audiocall-popup-image__image' src={img} width='200' height='200' alt='right answer img'></img>
       </div>
       <div className="audiocall__title">
-        Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span>
+        <span style={{color: `${fontColor}`}}>{reactionWord}</span>
+        <span>Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span></span>
       </div>
       <div className="audiocall-popup__buttons">
         {/* Ссылка должна быть динамической и изменяться в зависимости от игры */}
-        <Link to=''>
           <button className="button button_audiocall" type="button" onClick={clickNextButton}>Следующее слово</button>
-        </Link>
         <Link to='/games'>
           <button className="button button_audiocall" type="button">К списку игр</button>
         </Link>

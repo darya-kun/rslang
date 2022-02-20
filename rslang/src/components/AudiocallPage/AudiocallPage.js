@@ -8,7 +8,6 @@ import getWord from '../../utils/getWord';
 import './AudiocallPage.css';
 
 function AudiocallPage() {
-  const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
   const numbers = JSON.parse(localStorage.getItem('wordsArr'));
   const answer = localStorage.getItem('answer');
   
@@ -16,7 +15,7 @@ function AudiocallPage() {
   const [imgUrl, setImgUrl] = useState();
   const [audio, setAudio] = useState(null);
   const [answerWord, setAnswerWord] = useState(null);
-  const [visible, setVisible] = useState();
+  const [visible, setVisible] = useState(false);
 
   const popUp = () => {
     setVisible(true);
@@ -24,8 +23,13 @@ function AudiocallPage() {
     return answerWord
   }
 
+  const closePopUp = () => {
+    setVisible(false);
+    return answerWord
+  }
+
   const buttons = numbers.map((item, i) => 
-     <AnswerButton key={i} i={i} item={item} answerWord={answerWord} img={imgUrl}/>
+     <AnswerButton key={i} i={i} item={item} answerWord={answerWord} img={imgUrl} popUp={popUp}/>
   );
 
   useEffect(() => { 
@@ -35,7 +39,7 @@ function AudiocallPage() {
         setImgUrl(res.image);
         setAudio(res.audio);
         setAnswerWord(res.wordTranslate);
-        setVisible(true);
+      
       } catch (err) {
         console.log(err);
       }
@@ -61,7 +65,7 @@ function AudiocallPage() {
             </div>
           </div>
         </section>
-        <AudiocallPopupAnswer imgUrl={imgUrl} popUpVisible={visible}/>
+        <AudiocallPopupAnswer imgUrl={imgUrl} popUpVisible={visible} closePopUp={closePopUp}/>
       </div>
     )
   } else {
