@@ -8,7 +8,6 @@ import getWord from '../../utils/getWord';
 import './AudiocallPage.css';
 
 function AudiocallPage() {
-  const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
   const numbers = JSON.parse(localStorage.getItem('wordsArr'));
   const answer = localStorage.getItem('answer');
   

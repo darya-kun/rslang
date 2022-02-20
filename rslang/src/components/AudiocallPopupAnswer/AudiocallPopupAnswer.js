@@ -25,6 +25,7 @@ function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
       setFontColor('green');
       setReactionWord('Супер!');
     } else if (storage && storage[0] === 'wrong') {
+      setRightAnswer(storage[1]);
       setFontColor('red');
       setReactionWord('Ошибка!');
     }
@@ -48,7 +49,8 @@ function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
         <img className='audiocall-popup-image__image' src={img} width='200' height='200' alt='right answer img'></img>
       </div>
       <div className="audiocall__title">
-        {reactionWord} Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span>
+        <span style={{color: `${fontColor}`}}>{reactionWord}</span>
+        <span>Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span></span>
       </div>
       <div className="audiocall-popup__buttons">
         {/* Ссылка должна быть динамической и изменяться в зависимости от игры */}

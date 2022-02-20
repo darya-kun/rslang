@@ -7,12 +7,12 @@ const AnswerButton = ({i, item, answerWord, popUp}) => {
 
   function clickHandler() {
     if(word === answerWord) {
-      localStorage.setItem('audiocallAnswer', JSON.stringify(['right', `${word}`]));
+      localStorage.setItem('audiocallAnswer', JSON.stringify(['right', `${answerWord}`]));
       console.log('Answer is right');
       popUp()
    
     } else { 
-      localStorage.setItem('audiocallAnswer', 'wrong');
+      localStorage.setItem('audiocallAnswer', JSON.stringify(['wrong', `${answerWord}`]));
       console.log('Answer is wrong');
       popUp()
     }
