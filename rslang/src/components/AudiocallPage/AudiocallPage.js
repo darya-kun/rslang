@@ -2,68 +2,88 @@ import React, {useState, useEffect} from 'react';
 import GameSettings from '../GameSettings/GameSettings';
 import AnswerButton from '../AnswerButton/AnswerButton';
 import AudiocallVoice from '../AudiocallVoice/AudiocallVoice';
-import AudiocallImg from '../AudiocallImg/AudiocallImg';
+import AudiocallPopupAnswer from '../AudiocallPopupAnswer/AudiocallPopupAnswer';
 import getWord from '../../utils/getWord';
 // Styles
 import './AudiocallPage.css';
 
-function setStorage() {
-  localStorage.setItem('isClicked', true)
-}
-
 function AudiocallPage() {
+  const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
   const numbers = JSON.parse(localStorage.getItem('wordsArr'));
   const answer = localStorage.getItem('answer');
   
   const level = localStorage.getItem('selectedIndexLevel');
-  //const [obj, setObj] = useState();
+  const [imgUrl, setImgUrl] = useState();
   const [audio, setAudio] = useState(null);
   const [answerWord, setAnswerWord] = useState(null);
+  const [visible, setVisible] = useState();
+
+  const popUp = () => {
+    setVisible(true);
+    console.log('jjj', answerWord)
+    return answerWord
+  }
 
   const buttons = numbers.map((item, i) => 
-     <AnswerButton key={i} i={i} item={item} answerWord={answerWord} />
+     <AnswerButton key={i} i={i} item={item} answerWord={answerWord} img={imgUrl}/>
   );
-
-  function clickHandler() {
-    setStorage();
-  } 
 
   useEffect(() => { 
     async function fetchData() {
       try {
         const res = await getWord(level, answer);
-        //setObj(res);
+        setImgUrl(res.image);
         setAudio(res.audio);
         setAnswerWord(res.wordTranslate);
+        setVisible(true);
       } catch (err) {
         console.log(err);
       }
     }
       fetchData();
   });
+  
 
-  const voice = <AudiocallVoice audioUrl={audio} />;
-  const img = <AudiocallImg />;
-  const isClicked = localStorage.getItem('isClicked');
-
-  return (
-    <div className="container">
-      <section className='audiocall section'>
-        <GameSettings />
-        <div className='audiocall__wrapper'>
-          {isClicked ? img : voice}
-          <div className='audiocall__words'>
-            <div className='audiocall__buttons'>
-              {buttons}
+  if (visible) {
+    return (
+      <div className="container">
+        <section className='audiocall section'>
+          <GameSettings />
+          <div className='audiocall__wrapper'>
+            <AudiocallVoice audioUrl={audio} />
+            <div className='audiocall__words'>
+              <div className='audiocall__buttons'>
+                {buttons}
+              </div>
+            </div>
+            <div className='audiocall__help'>
+              <button className='audiocall__button'>Не знаю</button>
             </div>
           </div>
-          <div className='audiocall__help'>
-            <button className='audiocall__button' onClick={clickHandler}>Не знаю</button>
+        </section>
+        <AudiocallPopupAnswer imgUrl={imgUrl} popUpVisible={visible}/>
+      </div>
+    )
+  } else {
+    return (
+      <div className="container">
+        <section className='audiocall section'>
+          <GameSettings />
+          <div className='audiocall__wrapper'>
+            <AudiocallVoice audioUrl={audio} />
+            <div className='audiocall__words'>
+              <div className='audiocall__buttons'>
+                {buttons}
+              </div>
+            </div>
+            <div className='audiocall__help'>
+              <button className='audiocall__button'>Не знаю</button>
+            </div>
           </div>
-        </div>
-      </section>
-    </div>
-  )
+        </section>
+      </div>
+    )
+  }
 }
 
 export default AudiocallPage;
