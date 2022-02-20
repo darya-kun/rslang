@@ -3,11 +3,12 @@ import React, {useState} from 'react';
 const LevelButton = ({value, i}) => {
   const [selected, setSelected] = useState();
   const [color, setColor] = useState();
+
   function getLevel(i) {
-      setSelected(true);
-      setColor('#50ba9e');
-      localStorage.setItem('selectedLevel', 'true');
-      localStorage.setItem('selectedIndexLevel', i);
+    setSelected(true);
+    setColor('#50ba9e');
+    localStorage.setItem('selectedLevel', 'true');
+    localStorage.setItem('selectedIndexLevel', i);
   }
   
   return (
