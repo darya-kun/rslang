@@ -22,11 +22,11 @@ function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
     const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
     if (storage && storage[0] === 'right') {
       setRightAnswer(storage[1]);
-      setFontColor('green');
+      setFontColor('#28c38a');
       setReactionWord('Супер!');
     } else if (storage && storage[0] === 'wrong') {
       setRightAnswer(storage[1]);
-      setFontColor('red');
+      setFontColor('#ed593b');
       setReactionWord('Ошибка!');
     }
   }, [])
