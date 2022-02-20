@@ -7,10 +7,10 @@ const temp = new Service();
 const DictionaryCard = ({item}) => {
   const urlAudio = item.audio;
   const urlImage = item.image;
-  const [play, setPlay] = React.useState(false);
-  const [screenShot, setScreenshot] = useState(undefined);
+  const [play, setPlay] = useState(false);
+  const [screenShot, setScreenshot] = useState();
 
-  React.useEffect(() => {
+  useEffect(() => {
     const audio = new Audio(`https://react-learnwords-example.herokuapp.com/${urlAudio}`);
     const onPlay = () => audio.play();
     if (play) {
@@ -21,18 +21,15 @@ const DictionaryCard = ({item}) => {
   const onStart = () => {
     setPlay(true);
   }
+
+  async function fetchData() {
+    const [response] = await temp.getImage(urlImage)
+    setScreenshot(response);
+  }
  
   useEffect(() => {
-    async function fetchData() {
-      const [response, error] = await temp.getImage(urlImage)
-      if(error)
-        console.log(error)
-      else {
-        setScreenshot(response)
-      }
-    }
     fetchData();
-  })
+  }, [])
 
   return (
   <div className='dictionary-card'>
