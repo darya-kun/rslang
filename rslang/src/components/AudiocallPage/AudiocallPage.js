@@ -81,7 +81,7 @@ function AudiocallPage() {
               </div>
             </div>
             <div className='audiocall__help'>
-              <button className='audiocall__button'>Не знаю</button>
+              <button className='button button_audiocall'>Не знаю</button>
             </div>
           </div>
         </section>
