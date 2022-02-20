@@ -19,7 +19,6 @@ function AudiocallPage() {
 
   const popUp = () => {
     setVisible(true);
-    console.log('jjj', answerWord)
     return answerWord
   }
 

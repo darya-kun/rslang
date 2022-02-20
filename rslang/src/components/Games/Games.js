@@ -2,6 +2,7 @@ import React from 'react';
 import PageListItem from '../PageListItem/PageListItem';
 import { Link } from 'react-router-dom';
 import './games.css';
+import clearStorageFromAudiocallData from '../../utils/clearStorageFromAudiocallData';
 
 const Games = () => {
   const gameCard = [
@@ -10,7 +11,7 @@ const Games = () => {
   ]
 
   const elements = gameCard.map((item) => {
-    return <div className="games-card" key={item.id}><Link to={item.link}><PageListItem title={item.title} src={item.src}/></Link></div>
+    return <div className="games-card" key={item.id}><Link to={item.link}><PageListItem title={item.title} src={item.src} onClick={clearStorageFromAudiocallData}/></Link></div>
   });
 
   return (

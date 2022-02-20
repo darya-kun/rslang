@@ -1,6 +1,5 @@
 import Service from '../components/Api/Api';
 
-
 async function getWord(level, item) {
   const temp = new Service()
   try {
