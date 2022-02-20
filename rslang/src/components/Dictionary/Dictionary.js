@@ -11,6 +11,7 @@ const Dictionary = () => {
     { id: 4, src: '/img/cat-books.png'},
     { id: 5, src: '/img/cat-pencil.png'},
     { id: 6, src: '/img/cat-backpack.png'},
+    { id: 7, src: '/img/cat-books.png'},
   ]
 
   const elements = units.map((item) => {
