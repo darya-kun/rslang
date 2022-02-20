@@ -102,7 +102,7 @@
   width: 400px;
   height: 400px;
   padding: 20px 5px;
-  background-color: #f8f8f8;
+  background-color: var(--white);
   box-shadow: 1px 3px 4px rgb(0 0 0 / 10%);
 }
 
@@ -118,7 +118,7 @@
   width: 26px;
   height: 26px;
   margin-bottom: 5px;
-  fill: #d4d4d4;
+  fill: var(--black);
 }
 .counter {
   font-size: 16px;

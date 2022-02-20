@@ -30,10 +30,10 @@
 .voice__icon {
   width: 90px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 3px solid var(--black);
   padding: 5px;
   margin: 20px;
-  fill: #fff;
+  fill: var(--black);
 }
 
 .audiocall__button {
@@ -43,7 +43,7 @@
   font-size: 14px;
   border-radius: 20px;
   text-transform: uppercase;
-  color: #222;
+  color: var(--black);
 }
 
 .audiocall__button:hover {
