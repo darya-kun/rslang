@@ -1,6 +1,7 @@
 import React from 'react';
 import Burger from '../Burger/Burger';
 import { Link } from 'react-router-dom';
+import clearStorageFromAudiocallData from '../../utils/clearStorageFromAudiocallData';
 import './header.css';
 
 const Header = ({togglePopMenu}) => {
@@ -11,7 +12,7 @@ const Header = ({togglePopMenu}) => {
         <div className="header__wrapper">
           <Burger togglePopMenu={togglePopMenu}/>
           <Link className="title-link" to="/">
-            <h1 className="title">RS-Lang</h1>
+            <h1 className="title" onClick={clearStorageFromAudiocallData}>RS-Lang</h1>
           </Link>
           <button className="header__button button">Войти</button>
         </div>

@@ -12,7 +12,7 @@ const AnswerButton = ({i, item, answerWord, popUp}) => {
       popUp()
    
     } else { 
-      localStorage.setItem('audiocallAnswer', 'wrong');
+      localStorage.setItem('audiocallAnswer', JSON.stringify(['wrong', `${word}`]));
       console.log('Answer is wrong');
       popUp()
     }
