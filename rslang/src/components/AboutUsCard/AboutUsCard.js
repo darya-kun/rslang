@@ -1,18 +1,17 @@
 import React from 'react';
 import './aboutUsCard.css';
 
-const AboutUsCard = ({title, src}) => {
+const AboutUsCard = ({title, src, githubLink, description}) => {
   return (
     <div className="about-us__card">
-      <div className="about-us__card__title">
-        <img src={src} alt="role" className="about-us__card__img"></img>
-        <div className="about-us__card__info">
-          <p className="about-us__card__name">{title}</p>
-          <p className="about-us__card__role"> Frontender</p>  
+      <div className="about-us__card-title">
+        <img src={src} alt="role" className="about-us__card-img"></img>
+        <div className="about-us__card-info">
+          <a className="about-us__card-name" href={githubLink}><i class="about-us__card-icon fab fa-github"></i> {title}</a>
+          <p className="about-us__card-role">Frontender</p>  
         </div>
       </div>
-      <p className="about-us__card__text">"Thank you so much for these wonderful live webcams of the eagles on Catalina Island.
-      Being able to watch them in "</p>
+      <p className="about-us__card-text">{description}</p>
     </div>
   )
 }
