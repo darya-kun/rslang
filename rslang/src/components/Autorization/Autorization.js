@@ -46,7 +46,7 @@ const Autorization = () => {
           <br />
           <input type="submit" value="Login" />
         </form>
-        <p>Ты впервый раз? Тогда <Link to='/registration'>зарегистрируйся.</Link></p>
+        <p>Ты впервый раз? Тогда <Link to='/registration'>ЗАРЕГИСТРИРУЙСЯ.</Link></p>
       </div>
     </div>
   )
