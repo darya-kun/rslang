@@ -46,15 +46,23 @@ function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
   return (
     <div className="audiocall-popup" style={{display: `${ popUpVisible === true ? 'flex' : 'none' }`}}>
       <div className="audiocall-popup-image">
-        <img className='audiocall-popup-image__image' src={img} width='200' height='200' alt='right answer img'></img>
+        <img className='audiocall-popup-image__image' src={img} width='200' 
+             height='200' alt='right answer img'></img>
       </div>
       <div className="audiocall__title">
         <span style={{color: `${fontColor}`}}>{reactionWord}</span>
-        <span>Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span></span>
+        <span>Правильный ответ: 
+          <span className='audiocall__answer' style={{color: `${fontColor}`}}>
+            {rightAnswer}
+          </span>
+        </span>
       </div>
       <div className="audiocall-popup__buttons">
         {/* Ссылка должна быть динамической и изменяться в зависимости от игры */}
-          <button className="button button_audiocall" type="button" onClick={clickNextButton}>Следующее слово</button>
+          <button className="button button_audiocall" 
+                  type="button" 
+                  onClick={clickNextButton}>Следующее слово
+          </button>
         <Link to='/games'>
           <button className="button button_audiocall" type="button">К списку игр</button>
         </Link>

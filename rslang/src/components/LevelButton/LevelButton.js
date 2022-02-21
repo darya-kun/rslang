@@ -1,21 +1,20 @@
 import React, {useState} from 'react';
+import './levelButton.css';
 
-const LevelButton = ({value, i}) => {
-  const [selected, setSelected] = useState();
-  const [color, setColor] = useState();
-
-  function getLevel(i) {
-    setSelected(true);
-    setColor('#50ba9e');
+const LevelButton = ({value, classes, i, clickLevelHandler}) => {
+  function onClick(i, e) {
+    console.log(e.target)
+    e.target.style.backgroundColor = '#50ba9e';
+    clickLevelHandler();
     localStorage.setItem('selectedLevel', 'true');
     localStorage.setItem('selectedIndexLevel', i);
   }
-  
+
   return (
   <div>
-    <div className='level-button' selected={{selected}} 
-      style={{backgroundColor: `${color}`}} role='button'
-      tabIndex='0' onClick={() => getLevel(i, selected)}>{value}</div>
+    <div className={classes}
+         role='button' tabIndex='0'
+         onClick={(e) => onClick(i, e)}>{value}</div>
   </div>
   )
 }
