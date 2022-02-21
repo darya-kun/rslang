@@ -17,7 +17,7 @@ const Registration = () => {
   const [fName, setfName] = useState("");
   const [fEmail, setfEmail] = useState('');
   const [fPassword, setfPassword] = useState(``);
-  const kolya = useNavigate();
+  const navigate = useNavigate();
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -25,9 +25,9 @@ const Registration = () => {
 
     const response = await createUser(inputsValue);
     if (response.ok) {
-      kolya('/authorization')
+      navigate('/authorization')
     } else {
-      alert('try again')
+      alert('Неверно введены данные.')
       console.log(response)
     }
   };
