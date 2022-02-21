@@ -1,0 +1,9 @@
+.dictionary {
+  padding: 60px 0;
+}
+
+.dictionary__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

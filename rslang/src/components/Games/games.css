@@ -1,0 +1,14 @@
+.games {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px 0;
+  justify-content: center;
+}
+
+.games-card {
+  margin: 0 20px;
+}
+
+.games-card .card {
+  min-height: 200px;
+}
