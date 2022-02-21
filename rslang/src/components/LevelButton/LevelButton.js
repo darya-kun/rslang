@@ -3,7 +3,6 @@ import './levelButton.css';
 
 const LevelButton = ({value, classes, i, clickLevelHandler}) => {
   function onClick(i, e) {
-    console.log(e.target)
     e.target.style.backgroundColor = '#50ba9e';
     clickLevelHandler();
     localStorage.setItem('selectedLevel', 'true');
