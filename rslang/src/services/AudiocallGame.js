@@ -1,9 +1,9 @@
 import getRandomArr from "../utils/getRandomArr";
 import getRandom from "../utils/getRandom";
-import clearStorageFromAudiocallData from '../utils/clearStorageFromAudiocallData';
+import clearStorageInsideAudiocall from '../utils/clearStorageInsideAudiocall';
 
 export function AudiocallGame() {
-  clearStorageFromAudiocallData();
+  clearStorageInsideAudiocall();
   const num = getRandom(0, 19);
   const arr = getRandomArr(num);
 

@@ -31,18 +31,14 @@ function AudiocallPage() {
      <AnswerButton key={i} i={i} item={item} answerWord={answerWord} img={imgUrl} popUp={popUp}/>
   );
 
+  async function fetchData() {
+      const res = await getWord(level, answer);
+      setImgUrl(res.image);
+      setAudio(res.audio);
+      setAnswerWord(res.wordTranslate);
+  }
+
   useEffect(() => { 
-    async function fetchData() {
-      try {
-        const res = await getWord(level, answer);
-        setImgUrl(res.image);
-        setAudio(res.audio);
-        setAnswerWord(res.wordTranslate);
-      
-      } catch (err) {
-        console.log(err);
-      }
-    }
       fetchData();
   });
   

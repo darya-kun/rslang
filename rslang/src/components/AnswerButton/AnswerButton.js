@@ -15,18 +15,15 @@ const AnswerButton = ({i, item, answerWord, popUp}) => {
       popUp()
     }
   }
+
+  async function fetchData() {
+      const res = await getWord(level, item);
+      setWord(res.wordTranslate);
+  }
   
   useEffect(() => { 
-    async function fetchData() {
-      try {
-        const res = await getWord(level, item);
-        setWord(res.wordTranslate);
-      } catch (err) {
-        console.log(err);
-      }
-    }
       fetchData();
-  }, []);
+  });
    
   return (
     <button className='audiocall__button audiocall__button_answer' 
