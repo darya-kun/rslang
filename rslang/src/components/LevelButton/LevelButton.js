@@ -1,5 +1,5 @@
 import React from 'react';
-import './levelButton.css';
+import './LevelButton.css';
 
 const LevelButton = ({value, classes, i, clickLevelHandler}) => {
   function onClick(i, e) {
