@@ -17,12 +17,12 @@ function SprintGame() {
           <div className='start-screen__game-start'>
             <h3 className='start-screen__title_level'>Выбери уровень:</h3>
             <div className='level-buttons'>
-              <div className='level-button' role='button' tabindex='0'>A1</div>
-              <div className='level-button' role='button' tabindex='0'>A2</div>
-              <div className='level-button' role='button' tabindex='0'>B1</div>
-              <div className='level-button' role='button' tabindex='0'>B2</div>
-              <div className='level-button' role='button' tabindex='0'>C1</div>
-              <div className='level-button' role='button' tabindex='0'>C2</div>
+              <div className='level-button' role='button'>A1</div>
+              <div className='level-button' role='button'>A2</div>
+              <div className='level-button' role='button'>B1</div>
+              <div className='level-button' role='button'>B2</div>
+              <div className='level-button' role='button'>C1</div>
+              <div className='level-button' role='button'>C2</div>
             </div>
             <Link to='/sprint'>
               <button className='start-screen__button' type='button' disabled>Начать</button>
