@@ -216,7 +216,7 @@ export default class Service {
         body: JSON.stringify(settings),
       });
     };
-  
+  */
     async signIn(user) {
       const response = await fetch(this._apiBase + 'signin', {
         method: 'POST',
@@ -227,6 +227,6 @@ export default class Service {
         body: JSON.stringify(user)
       });
       return await response.json();
-    };*/
+    };
 };
 export const service = new Service();
