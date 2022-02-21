@@ -6,10 +6,15 @@ const AudiocallVoice = ({audioUrl}) => {
   useEffect(() => {
     const audio = new Audio(`https://react-learnwords-example.herokuapp.com/${audioUrl}`);
     const onPlay = () => audio.play();
+    const onMute = () => {
+      setPlay(false);
+    }
+  
     if (play) {
       audio.addEventListener("canplaythrough", onPlay);
+      audio.addEventListener('ended', onMute);
     }
-  }, [play, audioUrl]);
+  }, [audioUrl, play]);
 
   const onStart = () => {
     setPlay(true);

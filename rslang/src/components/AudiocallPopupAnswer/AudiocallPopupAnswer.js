@@ -6,17 +6,37 @@ import './AudiocallPopupAnswer.css';
 
 const temp = new Service();
 
-function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
+function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp, countWords}) {
   const [rightAnswer, setRightAnswer] = useState();
   const [img, setImg] = useState();
   const [fontColor, setFontColor] = useState();
   const [reactionWord, setReactionWord] = useState();
 
+
+
   function clickNextButton() {
     AudiocallGame();
-
     closePopUp();
+    const answeredWords = countWords();
+    console.log(answeredWords, 'answeredWords')
   }
+
+  const text = 'Правильный ответ:  '
+  /*const linkToResults = <Link to='/games/result'>
+                          <button className="button button_results" type="button">Результаты</button>
+                        </Link>;*/
+  const next = <button className="button button_audiocall" 
+                       type="button" 
+                       onClick={clickNextButton}>Следующее слово
+                </button>;
+
+/*useEffect(() => {
+  if (answeredWords > 3) {
+    setButton(linkToResults)
+  } else {
+    setButton(next)
+  }
+},[answeredWords] )*/
 
   useEffect(() => {
     const storage = JSON.parse(localStorage.getItem('audiocallAnswer'));
@@ -46,15 +66,20 @@ function AudiocallPopupAnswer({imgUrl, popUpVisible, closePopUp}) {
   return (
     <div className="audiocall-popup" style={{display: `${ popUpVisible === true ? 'flex' : 'none' }`}}>
       <div className="audiocall-popup-image">
-        <img className='audiocall-popup-image__image' src={img} width='200' height='200' alt='right answer img'></img>
+        <img className='audiocall-popup-image__image' src={img} width='200' 
+             height='200' alt='right answer img'></img>
       </div>
       <div className="audiocall__title">
         <span style={{color: `${fontColor}`}}>{reactionWord}</span>
-        <span>Правильный ответ: <span className='audiocall__answer' style={{color: `${fontColor}`}}>{rightAnswer}</span></span>
+        <span>{ text }   
+          <span className='audiocall__answer' style={{color: `${fontColor}`}}>
+            { rightAnswer }
+          </span>
+        </span>
       </div>
       <div className="audiocall-popup__buttons">
         {/* Ссылка должна быть динамической и изменяться в зависимости от игры */}
-          <button className="button button_audiocall" type="button" onClick={clickNextButton}>Следующее слово</button>
+        { next }
         <Link to='/games'>
           <button className="button button_audiocall" type="button">К списку игр</button>
         </Link>
