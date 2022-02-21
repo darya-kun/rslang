@@ -7,7 +7,6 @@ const AudiocallVoice = ({audioUrl}) => {
     const audio = new Audio(`https://react-learnwords-example.herokuapp.com/${audioUrl}`);
     const onPlay = () => audio.play();
     const onMute = () => {
-      console.log('take')
       setPlay(false);
     }
   

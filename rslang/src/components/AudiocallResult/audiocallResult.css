@@ -1,0 +1,9 @@
+.results-popup-image {
+  margin-top: -100px;
+}
+
+.results-popup-image__image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}

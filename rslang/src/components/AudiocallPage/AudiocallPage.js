@@ -16,6 +16,12 @@ function AudiocallPage() {
   const [audio, setAudio] = useState(null);
   const [answerWord, setAnswerWord] = useState(null);
   const [visible, setVisible] = useState(false);
+  const [count, setCount] = useState(1);
+
+  const countWords = () => {
+    setCount(count + 1);
+    return count;
+  }
 
   const popUp = () => {
     setVisible(true);
@@ -42,7 +48,6 @@ function AudiocallPage() {
       fetchData();
   });
   
-
   if (visible) {
     return (
       <div className="container">
@@ -60,7 +65,8 @@ function AudiocallPage() {
             </div>
           </div>
         </section>
-        <AudiocallPopupAnswer imgUrl={imgUrl} popUpVisible={visible} closePopUp={closePopUp}/>
+        <AudiocallPopupAnswer imgUrl={imgUrl} popUpVisible={visible} 
+                              closePopUp={closePopUp} countWords={countWords}/>
       </div>
     )
   } else {

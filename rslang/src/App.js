@@ -11,6 +11,7 @@ import Games from './components/Games/Games';
 import SprintGame from './components/SprintGame/SprintGame';
 import AudiocallStartscreen from './components/AudiocallStartscreen/AudiocallStartscreen';
 import AudiocallPage from './components/AudiocallPage/AudiocallPage';
+import AudiocallResult from './components/AudiocallResult/AudiocallResult';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Autorization from './components/Autorization/Autorization';
 import Registration from './components/Registration/Registration';
@@ -45,6 +46,7 @@ const App = () => {
               <Route path='/statistic' element={<Statistic/>} />
               <Route path='/games/sprint' element={<SprintGame/>} />
               <Route path='/games/audiocall' element={<AudiocallStartscreen/>} /> 
+              <Route path='/games/audiocall/result' element={<AudiocallResult/>} /> 
               <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
             </Routes>
             </div>
@@ -69,6 +71,7 @@ const App = () => {
                 <Route path='/statistic' element={<Statistic/>} />
                 <Route path='/games/sprint' element={<SprintGame/>} />
                 <Route path='/games/audiocall' element={<AudiocallStartscreen/>} /> 
+                <Route path='/games/audiocall/result' element={<AudiocallResult/>} /> 
                 <Route path='/games/audiocall/:page' element={<AudiocallPage/>} /> 
               </Routes>
             </main>
