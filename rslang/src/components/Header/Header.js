@@ -15,7 +15,7 @@ const Header = ({togglePopMenu}) => {
   const handleDarkThemeClick = () => {
     setTheme('dark');
   }
-
+  const name = localStorage.getItem('name');
   return (
     <header className='header'>
       <div className="container">
@@ -35,7 +35,7 @@ const Header = ({togglePopMenu}) => {
           <Link className="title-link" to="/">
             <h1 className="title" onClick={clearStorageFromAudiocallData}>RS-Lang</h1>
           </Link>
-          <button className="header__button button">Войти</button>
+          <button className="header__button button" >{name ? name : <Link to='/registration'>Войти</Link>}</button>
         </div>
       </div>
     </header>
