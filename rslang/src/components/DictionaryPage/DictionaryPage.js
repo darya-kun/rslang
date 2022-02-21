@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import DictionaryGameLinks from '../DictionaryGameLinks/DictionaryGameLinks';
 import DictionaryPagination from '../DictionaryPagination/DictionaryPagination';
 import DictionaryCardsContainer from '../DictionaryCardsContainer/DictionaryCardsContainer';
 import './dictionaryPage.css';
-import { useParams } from 'react-router-dom';
+//import { useParams } from 'react-router-dom';
 
 const DictionaryPage = ({id}) => {
-  const params = useParams();
-  const current = params.id;
+  //const params = useParams();
+  //const current = params.id;
  
   const [numberPage, setNumberPage] = useState(1);
 
