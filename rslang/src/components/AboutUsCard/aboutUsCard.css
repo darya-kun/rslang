@@ -1,0 +1,56 @@
+.about-us {
+  padding: 60px 0;
+}
+
+.about-us__content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.about-us__card {
+  max-width: 300px;
+  width: 100%;
+  padding: 15px 10px;
+}
+
+.about-us__card-title {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.about-us__card-img {
+  width: 90px;
+  height: 90px;
+  margin-right: 20px;
+  /* border-radius: 50%; */
+}
+
+.about-us__card-name {
+  display: flex;
+  align-items: center;
+  margin: 7px 0 5px;
+  font-size: 24px;
+  font-weight: 500;
+  transition: all .3s;
+}
+
+.about-us__card-name:hover {
+  color: var(--orange);
+}
+
+.about-us__card-icon {
+  font-size: 16px;
+  margin-right: 5px;
+}
+
+.about-us__card-role {
+  margin: 7px 0 5px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.about-us__card-text {
+  font-size: 14px;
+}
+

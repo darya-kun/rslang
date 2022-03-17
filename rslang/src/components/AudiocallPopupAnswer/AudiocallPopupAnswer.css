@@ -1,0 +1,41 @@
+.audiocall-popup {
+  position: fixed;
+  top: 20%;
+  left: calc(50% - 230px);
+  width: 450px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--white);
+  border-radius: 8px;
+  z-index: 100;
+}
+
+.audiocall-popup-image__image {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+}
+
+.audiocall__title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.audiocall__answer {
+  font-size: 16px;
+}
+
+.audiocall-popup__buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button_audiocall {
+  margin: 0 5px;
+}
